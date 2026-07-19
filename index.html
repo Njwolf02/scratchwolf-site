@@ -4,83 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ScratchWolf — Scratch-Off Odds &amp; Analysis</title>
-  <meta name="description" content="ScratchWolf analyzes publicly available state lottery data so you know which scratch-off tickets are worth buying — before you spend. Educational lottery data for 44 states, updated daily." />
+  <meta name="description" content="ScratchWolf recounts the remaining prizes on every scratch-off game in 44 states each morning, so you know which tickets are worth buying before you spend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; line-height: 1.6; background: #ffffff; }
-    .hero { background: #0F172A; color: #fff; padding: 72px 24px 64px; text-align: center; }
-    .hero .logo { font-size: 52px; margin-bottom: 12px; }
-    .hero h1 { font-size: 40px; letter-spacing: 1px; font-weight: 900; }
-    .hero h1 .wolf { color: #10B981; }
-    .hero .tagline { font-size: 19px; color: #cbd5e1; margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; }
-    .hero .coming { display: inline-block; margin-top: 28px; background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 999px; }
-    .section { max-width: 860px; margin: 0 auto; padding: 56px 24px; }
-    .section h2 { font-size: 26px; color: #0F172A; margin-bottom: 20px; text-align: center; }
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 28px; }
-    .card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 22px; }
-    .card .icon { font-size: 26px; }
-    .card h3 { font-size: 16px; color: #0F172A; margin: 10px 0 6px; }
-    .card p { font-size: 14px; color: #475569; }
-    .edu { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px; padding: 26px; margin-top: 40px; }
-    .edu h3 { color: #166534; font-size: 17px; margin-bottom: 8px; }
-    .edu p { color: #166534; font-size: 14px; }
-    .disclaimer { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; text-align: center; color: #94a3b8; font-size: 12px; line-height: 1.7; }
-    footer { background: #0F172A; color: #94a3b8; padding: 32px 24px; text-align: center; font-size: 13px; }
-    footer a { color: #10B981; text-decoration: none; margin: 0 10px; }
-    footer .company { margin-top: 10px; font-size: 12px; color: #64748b; }
-    @media (max-width: 480px) { .hero h1 { font-size: 30px; } }
+    :root { --navy:#0F172A; --green:#0e9f6e; --paper:#faf9f6; --ink:#1c2434; --muted:#5b6472; --rule:#e4e1d8; }
+    body { font-family: 'Public Sans', -apple-system, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    h1,h2,h3 { font-family: 'Fraunces', Georgia, serif; }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 0 28px; }
+    nav { padding: 26px 0; }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .mark svg { width: 30px; height: 30px; }
+    .mark b { font-family: 'Fraunces', serif; font-weight: 800; font-size: 19px; color: var(--navy); letter-spacing: .2px; }
+    nav .right { font-size: 14px; color: var(--muted); }
+    .hero { padding: 52px 0 26px; }
+    .hero .wrap { display: flex; gap: 56px; align-items: center; flex-wrap: wrap; }
+    .hero .copy { flex: 1 1 420px; }
+    .kicker { font-size: 13px; font-weight: 700; letter-spacing: .12em; color: var(--green); text-transform: uppercase; }
+    .hero h1 { font-size: 52px; line-height: 1.04; font-weight: 800; color: var(--navy); margin-top: 14px; letter-spacing: -0.5px; }
+    .hero .sub { font-size: 18px; color: var(--muted); margin-top: 20px; max-width: 480px; }
+    .badge { display: inline-block; margin-top: 28px; border: 1.5px solid var(--navy); color: var(--navy); font-weight: 700; font-size: 14px; padding: 11px 20px; }
+    .phone { flex: 0 0 280px; margin: 0 auto; }
+    .phone .frame { border: 10px solid var(--navy); border-radius: 38px; overflow: hidden; box-shadow: 14px 14px 0 rgba(15,23,42,.08); }
+    .phone img { display: block; width: 100%; }
+    .phone figcaption { font-size: 12px; color: var(--muted); margin-top: 10px; text-align: center; }
+    .rule { border: 0; border-top: 1px solid var(--rule); margin: 44px 0 0; }
+    section { padding: 56px 0; }
+    .how h2 { font-size: 30px; color: var(--navy); max-width: 520px; }
+    .rows { margin-top: 30px; }
+    .row { display: flex; gap: 26px; padding: 22px 0; border-top: 1px solid var(--rule); }
+    .row:last-child { border-bottom: 1px solid var(--rule); }
+    .row .n { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 800; color: var(--green); padding-top: 3px; min-width: 30px; }
+    .row h3 { font-size: 18px; color: var(--navy); }
+    .row p { font-size: 15px; color: var(--muted); margin-top: 4px; max-width: 560px; }
+    .edu { background: var(--navy); color: #e8edf5; padding: 46px 0; }
+    .edu h2 { font-size: 26px; color: #fff; }
+    .edu p { margin-top: 12px; max-width: 640px; color: #b9c3d4; font-size: 15.5px; }
+    .edu em { color: var(--green); font-style: normal; font-weight: 700; }
+    .fine { padding: 34px 0 8px; font-size: 12.5px; color: #8a8f99; max-width: 700px; }
+    footer { padding: 26px 0 44px; font-size: 13.5px; color: var(--muted); }
+    footer a { color: var(--navy); }
+    @media (max-width: 640px) { .hero h1 { font-size: 36px; } .phone { flex-basis: 230px; } }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="/">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>
+        <b>ScratchWolf</b>
+      </a>
+      <span class="right">Louisville, KY</span>
+    </div>
+  </nav>
+
   <div class="hero">
-    <div class="logo">🐺</div>
-    <h1>SCRATCH<span class="wolf">WOLF</span></h1>
-    <p class="tagline">Know which scratch-off tickets are worth buying — before you spend a dollar. Daily data on every game in your state.</p>
-    <div class="coming">📱 Coming soon to the App Store &amp; Google Play</div>
+    <div class="wrap">
+      <div class="copy">
+        <div class="kicker">Scratch-off odds &amp; analysis</div>
+        <h1>The big prize might already be gone. We check.</h1>
+        <p class="sub">Every morning, ScratchWolf recounts the remaining prizes on every scratch-off in your state — 3,000+ games across 44 states — and scores each one on the math, not the marketing.</p>
+        <span class="badge">Coming soon · App Store &amp; Google Play</span>
+      </div>
+      <figure class="phone">
+        <div class="frame"><img src="/assets/app-screen.png" alt="ScratchWolf game analysis screen showing a value score of 79 for a Kentucky scratch-off" /></div>
+        <figcaption>Actual app: a $5 Kentucky game, scored 79/100.</figcaption>
+      </figure>
+    </div>
+    <div class="wrap"><hr class="rule" /></div>
   </div>
 
-  <div class="section">
-    <h2>Smarter scratch-off decisions, powered by public data</h2>
-    <div class="features">
-      <div class="card">
-        <div class="icon">📊</div>
-        <h3>Daily Prize Tracking</h3>
-        <p>We analyze official state lottery websites every morning — remaining top prizes, odds, and prize pools for 3,000+ games across 44 states.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🎯</div>
-        <h3>Value Rankings</h3>
-        <p>Every game scored on real math: expected value, odds, and prize availability — ranked within your state, where you actually buy.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🚫</div>
-        <h3>Skip the Dead Tickets</h3>
-        <p>See which games have already paid out their top prizes — free for everyone, because knowing what <em>not</em> to buy is half the value.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🔔</div>
-        <h3>Prize Alerts</h3>
-        <p>Get notified when a top prize is claimed or a game in your state starts selling out.</p>
+  <section class="how">
+    <div class="wrap">
+      <h2>What the state lottery publishes, made useful</h2>
+      <div class="rows">
+        <div class="row"><span class="n">01</span><div><h3>Prize counts, refreshed daily</h3><p>State lotteries disclose how many top prizes remain on each game. We collect those numbers every morning, so you can skip a ticket whose jackpots were all claimed months ago.</p></div></div>
+        <div class="row"><span class="n">02</span><div><h3>One score per game</h3><p>Odds, prize pool, expected value, and trend, combined into a single 0–100 score. A $5 game in Kentucky is compared against other Kentucky games, because that's where you're actually standing in line.</p></div></div>
+        <div class="row"><span class="n">03</span><div><h3>The "skip these" list, free</h3><p>Games with dead prize pools get flagged for everyone, no subscription required. Knowing what not to buy is half the point.</p></div></div>
+        <div class="row"><span class="n">04</span><div><h3>Alerts when things change</h3><p>A top prize gets claimed, a game starts selling out, a fresh game launches with a full pool. You'll hear about it the same morning we do.</p></div></div>
       </div>
     </div>
+  </section>
 
-    <div class="edu">
-      <h3>An education tool — not a gambling service</h3>
-      <p>ScratchWolf does not sell lottery tickets, accept wagers, or award prizes. We analyze publicly available data published by state lotteries to help players make informed decisions. Every lottery game has a negative expected return long-term — we show you the math, and we'll always tell you when the smartest play is not to play.</p>
+  <section class="edu">
+    <div class="wrap">
+      <h2>A data tool, not a gambling service</h2>
+      <p>ScratchWolf doesn't sell tickets, take wagers, or award prizes. We analyze the public data that state lotteries are required to publish. Every lottery game loses money on average — <em>we show you that math too</em>, and when the smartest play is not to play, the app says so.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="disclaimer">
-    ScratchWolf is not affiliated with or endorsed by any state lottery. Lottery data is collected from official public sources and may be delayed. Results are never guaranteed. Intended for users 18 years or older (19+/21+ where required). If you or someone you know has a gambling problem, call the National Problem Gambling Helpline at 1-800-GAMBLER.
+  <div class="wrap">
+    <p class="fine">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is collected from official public sources and may be delayed; results are never guaranteed. For adults 18+ (19/21 where required). If gambling is causing you harm, call 1-800-GAMBLER.</p>
   </div>
 
   <footer>
-    <div>
-      <a href="/privacy.html">Privacy Policy</a> ·
-      <a href="/terms.html">Terms of Service</a> ·
-      <a href="mailto:support@scratchwolf.com">Support</a>
+    <div class="wrap">
+      <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> · <span>Built by <a href="https://wolfdigitable.com">Wolf Digitable</a></span>
     </div>
-    <div class="company">© 2026 ScratchWolf · A Wolf Digitable product</div>
   </footer>
 </body>
 </html>
