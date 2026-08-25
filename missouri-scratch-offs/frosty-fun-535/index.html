@@ -24,7 +24,19 @@ color:var(--ink);background:var(--paper);line-height:1.65}
 h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
 header{border-bottom:1px solid var(--rule);padding:18px 0}
-header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-weight:800;font-size:19px}
+header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-weight:800;font-size:19px;
+  display:inline-flex;align-items:center;gap:9px}
+header a svg{width:26px;height:26px;flex:0 0 26px}
+/* Shape-based assets outperform every other kind of distinctive asset, and this mark appeared on
+   the hand-authored landing page ONLY — the 3,343 generated pages, which are the ones search
+   traffic actually lands on, carried a text wordmark and no shape at all. */
+.markline{display:flex;align-items:center;gap:10px;margin:34px 0 0}
+.markline svg{width:20px;height:20px;flex:0 0 20px;opacity:.9}
+.markline h2{margin:0}
+.gnum{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+footer .fmark{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+footer .fmark svg{width:20px;height:20px}
+footer .fmark b{font-family:Fraunces,serif;font-size:15px;color:var(--navy)}
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
@@ -59,7 +71,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"FROSTY FUN (Missouri Lottery scratch-off)","sku":"535","category":"Lottery scratch-off ticket","offers":{"@type":"Offer","price":1,"priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
 </head>
 <body>
-<header><div class="wrap"><a href="https://scratchwolf.com/">ScratchWolf</a></div></header>
+<header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a></div></header>
 <main class="wrap">
 <p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a> › FROSTY FUN</p>
 <h1>FROSTY FUN</h1>
@@ -135,6 +147,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <p class="sub">Prize counts come from the Missouri Lottery (<a href="https://www.molottery.com/scratchers.do?method=d&amp;game=535" rel="nofollow noopener">official source</a>) and are recounted every morning.</p>
 <p><a href="https://scratchwolf.com/missouri-scratch-offs/">← All Missouri scratch-offs</a></p></main>
 <footer><div class="wrap">
+<div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
 <p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
