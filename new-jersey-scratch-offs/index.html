@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -46,7 +53,7 @@ footer .legal{font-size:12px;line-height:1.6}
 footer .help{font-weight:700;color:var(--ink)}
 .crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"New Jersey scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 66 active New Jersey Lottery scratch-off games.","url":"https://scratchwolf.com/new-jersey-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"New Jersey scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 66 active New Jersey Lottery scratch-off games.","url":"https://scratchwolf.com/new-jersey-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-25"}</script>
 </head>
 <body>
 <header><div class="wrap"><a href="https://scratchwolf.com/">ScratchWolf</a></div></header>
@@ -55,6 +62,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <h1>New Jersey Scratch-Off Odds &amp; Prizes Remaining</h1>
 <p class="sub">All 66 active New Jersey Lottery scratch-off games, with top prizes still
 unclaimed and the overall odds printed on each ticket. Recounted every morning.</p>
+<div class="table-wrap">
 <table>
 <thead><tr><th>Game</th><th class="num">Price</th><th class="num">Top prize</th>
 <th class="num">Overall odds</th><th class="num">Top prizes left</th></tr></thead>
@@ -120,7 +128,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$20</td>
   <td class="num">$1,000,000</td>
   <td class="num">1 in 4</td>
-  <td class="num">33 of 49</td>
+  <td class="num">32 of 49</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/100-million-diamond-dazzler-01913/">$100 Million Diamond Dazzler</a></td>
@@ -281,7 +289,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$200,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">3547 of 9231</td>
+  <td class="num">3516 of 9231</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/jersey-dog-01973/">Jersey Dog</a></td>
@@ -309,7 +317,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$200,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">30 of 78</td>
+  <td class="num">29 of 78</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/wild-side-01925/">Wild Side</a></td>
@@ -337,7 +345,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$150,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">33 of 40</td>
+  <td class="num">32 of 40</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/loteria-grande-01969/">LOTERIA Grande</a></td>
@@ -379,7 +387,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$100,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">0 of 3</td>
+  <td class="num">1 of 3</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/super-crossword-01975/">Super Crossword</a></td>
@@ -407,7 +415,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$3</td>
   <td class="num">$30,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">525 of 706</td>
+  <td class="num">524 of 706</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/loteria-01952/">LOTERIA</a></td>
@@ -449,14 +457,14 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$2</td>
   <td class="num">$10,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">2 of 3</td>
+  <td class="num">11 of 24</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/money-mania-01983/">Money Mania</a></td>
   <td class="num">$2</td>
   <td class="num">$10,000</td>
   <td class="num">1 in 5</td>
-  <td class="num">43 of 78</td>
+  <td class="num">41 of 78</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/cold-cash-01893/">Cold Cash</a></td>
@@ -491,28 +499,28 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$1</td>
   <td class="num">$500</td>
   <td class="num">1 in 5</td>
-  <td class="num">1112 of 1867</td>
+  <td class="num">1102 of 1867</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/cash-lines-01961/">Cash Lines</a></td>
   <td class="num">$5</td>
   <td class="num">$500</td>
   <td class="num">1 in 8</td>
-  <td class="num">859 of 1901</td>
+  <td class="num">857 of 1901</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/cash-in-a-flash-01885/">Cash In A Flash</a></td>
   <td class="num">$10</td>
   <td class="num">$500</td>
   <td class="num">1 in 8</td>
-  <td class="num">2332 of 9235</td>
+  <td class="num">2330 of 9235</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/50-000-000-fast-cash-01915/">$50,000,000 Fast Cash</a></td>
   <td class="num">$20</td>
   <td class="num">$500</td>
   <td class="num">1 in 10</td>
-  <td class="num">931 of 2496</td>
+  <td class="num">929 of 2496</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/new-jersey-scratch-offs/loose-change-01949/">Loose Change</a></td>
@@ -523,7 +531,8 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 </tr>
 </tbody>
 </table>
-<a class="cta" href="https://app.scratchwolf.com/browse?state=NJ">
+</div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>See which of these are actually worth buying</b>
   <span>ScratchWolf ranks every New Jersey game by expected value and prize depletion, and forecasts
   how likely each game's top prizes are to be claimed in the next two weeks — free.</span>
@@ -531,7 +540,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 <h2>Other states</h2>
 <ul class="grid"><li><a href="https://scratchwolf.com/arkansas-scratch-offs/">Arkansas</a></li><li><a href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</a></li><li><a href="https://scratchwolf.com/california-scratch-offs/">California</a></li><li><a href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</a></li><li><a href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</a></li><li><a href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</a></li><li><a href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</a></li><li><a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a></li><li><a href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</a></li><li><a href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</a></li><li><a href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</a></li><li><a href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</a></li><li><a href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</a></li><li><a href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</a></li><li><a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a></li><li><a href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</a></li><li><a href="https://scratchwolf.com/massachusetts-scratch-offs/">Massachusetts</a></li><li><a href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</a></li><li><a href="https://scratchwolf.com/maine-scratch-offs/">Maine</a></li><li><a href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</a></li><li><a href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</a></li><li><a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a></li><li><a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a></li><li><a href="https://scratchwolf.com/montana-scratch-offs/">Montana</a></li><li><a href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</a></li><li><a href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</a></li><li><a href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</a></li><li><a href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</a></li><li><a href="https://scratchwolf.com/new-york-scratch-offs/">New York</a></li><li><a href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</a></li><li><a href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</a></li><li><a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a></li><li><a href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</a></li><li><a href="https://scratchwolf.com/rhode-island-scratch-offs/">Rhode Island</a></li><li><a href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</a></li><li><a href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</a></li><li><a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a></li><li><a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a></li><li><a href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</a></li><li><a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a></li><li><a href="https://scratchwolf.com/washington-scratch-offs/">Washington</a></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a></li><li><a href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</a></li></ul></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

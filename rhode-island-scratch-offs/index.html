@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -46,7 +53,7 @@ footer .legal{font-size:12px;line-height:1.6}
 footer .help{font-weight:700;color:var(--ink)}
 .crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Rhode Island scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 71 active Rhode Island Lottery scratch-off games.","url":"https://scratchwolf.com/rhode-island-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Rhode Island scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 71 active Rhode Island Lottery scratch-off games.","url":"https://scratchwolf.com/rhode-island-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-25"}</script>
 </head>
 <body>
 <header><div class="wrap"><a href="https://scratchwolf.com/">ScratchWolf</a></div></header>
@@ -55,6 +62,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <h1>Rhode Island Scratch-Off Odds &amp; Prizes Remaining</h1>
 <p class="sub">All 71 active Rhode Island Lottery scratch-off games, with top prizes still
 unclaimed and the overall odds printed on each ticket. Recounted every morning.</p>
+<div class="table-wrap">
 <table>
 <thead><tr><th>Game</th><th class="num">Price</th><th class="num">Top prize</th>
 <th class="num">Overall odds</th><th class="num">Top prizes left</th></tr></thead>
@@ -151,18 +159,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">1 of 2</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/mega-crossword-1411/">MEGA CROSSWORD</a></td>
-  <td class="num">$10</td>
-  <td class="num">$75,000</td>
-  <td class="num">1 in 3.55</td>
-  <td class="num">2 of 4</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/100x-the-money-1477/">100X THE MONEY</a></td>
   <td class="num">$10</td>
   <td class="num">$75,000</td>
   <td class="num">1 in 3.94</td>
   <td class="num">1 of 2</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/mega-crossword-1411/">MEGA CROSSWORD</a></td>
+  <td class="num">$10</td>
+  <td class="num">$75,000</td>
+  <td class="num">1 in 3.55</td>
+  <td class="num">1 of 4</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/mega-loteria-1475/">MEGA LOTERIA</a></td>
@@ -179,13 +187,6 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">1 of 1</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/lucky-match-1486/">LUCKY MATCH</a></td>
-  <td class="num">$10</td>
-  <td class="num">$50,000</td>
-  <td class="num">1 in 3.62</td>
-  <td class="num">1 of 2</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/patriots-1505/">PATRIOTS</a></td>
   <td class="num">$5</td>
   <td class="num">$50,000</td>
@@ -198,6 +199,13 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$50,000</td>
   <td class="num">1 in 3.67</td>
   <td class="num">2 of 2</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/lucky-match-1486/">LUCKY MATCH</a></td>
+  <td class="num">$10</td>
+  <td class="num">$50,000</td>
+  <td class="num">1 in 3.62</td>
+  <td class="num">1 of 2</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/wheel-of-fortune-1454/">WHEEL OF FORTUNE</a></td>
@@ -298,17 +306,17 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">1 of 2</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/wheel-of-fortune-1453/">WHEEL OF FORTUNE</a></td>
-  <td class="num">$5</td>
-  <td class="num">$30,000</td>
-  <td class="num">1 in 4.35</td>
-  <td class="num">1 of 2</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/30-000-silver-payout-1461/">$30,000 SILVER PAYOUT</a></td>
   <td class="num">$5</td>
   <td class="num">$30,000</td>
   <td class="num">1 in 3.97</td>
+  <td class="num">1 of 2</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/wheel-of-fortune-1453/">WHEEL OF FORTUNE</a></td>
+  <td class="num">$5</td>
+  <td class="num">$30,000</td>
+  <td class="num">1 in 4.35</td>
   <td class="num">1 of 2</td>
 </tr>
 <tr>
@@ -431,18 +439,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">0 of 1</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/count-up-cash-1418/">COUNT UP CASH</a></td>
-  <td class="num">$2</td>
-  <td class="num">$5,000</td>
-  <td class="num">1 in 5.21</td>
-  <td class="num">2 of 2</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/sapphire-blue-2x-1491/">SAPPHIRE BLUE 2X</a></td>
   <td class="num">$2</td>
   <td class="num">$5,000</td>
   <td class="num">1 in 4.21</td>
   <td class="num">1 of 2</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/count-up-cash-1418/">COUNT UP CASH</a></td>
+  <td class="num">$2</td>
+  <td class="num">$5,000</td>
+  <td class="num">1 in 5.21</td>
+  <td class="num">2 of 2</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/rhode-island-scratch-offs/rhode-island-loteria-1483/">RHODE ISLAND LOTERIA</a></td>
@@ -558,7 +566,8 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 </tr>
 </tbody>
 </table>
-<a class="cta" href="https://app.scratchwolf.com/browse?state=RI">
+</div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>See which of these are actually worth buying</b>
   <span>ScratchWolf ranks every Rhode Island game by expected value and prize depletion, and forecasts
   how likely each game's top prizes are to be claimed in the next two weeks — free.</span>
@@ -566,7 +575,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 <h2>Other states</h2>
 <ul class="grid"><li><a href="https://scratchwolf.com/arkansas-scratch-offs/">Arkansas</a></li><li><a href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</a></li><li><a href="https://scratchwolf.com/california-scratch-offs/">California</a></li><li><a href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</a></li><li><a href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</a></li><li><a href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</a></li><li><a href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</a></li><li><a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a></li><li><a href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</a></li><li><a href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</a></li><li><a href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</a></li><li><a href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</a></li><li><a href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</a></li><li><a href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</a></li><li><a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a></li><li><a href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</a></li><li><a href="https://scratchwolf.com/massachusetts-scratch-offs/">Massachusetts</a></li><li><a href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</a></li><li><a href="https://scratchwolf.com/maine-scratch-offs/">Maine</a></li><li><a href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</a></li><li><a href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</a></li><li><a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a></li><li><a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a></li><li><a href="https://scratchwolf.com/montana-scratch-offs/">Montana</a></li><li><a href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</a></li><li><a href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</a></li><li><a href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</a></li><li><a href="https://scratchwolf.com/new-jersey-scratch-offs/">New Jersey</a></li><li><a href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</a></li><li><a href="https://scratchwolf.com/new-york-scratch-offs/">New York</a></li><li><a href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</a></li><li><a href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</a></li><li><a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a></li><li><a href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</a></li><li><a href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</a></li><li><a href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</a></li><li><a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a></li><li><a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a></li><li><a href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</a></li><li><a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a></li><li><a href="https://scratchwolf.com/washington-scratch-offs/">Washington</a></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a></li><li><a href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</a></li></ul></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

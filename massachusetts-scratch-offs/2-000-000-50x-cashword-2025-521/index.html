@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -61,55 +68,55 @@ footer .help{font-weight:700;color:var(--ink)}
   <div><dt>Top prizes left</dt><dd>2 / 5</dd></div>
 </dl>
 <h2>Prizes remaining by tier</h2>
-<table><thead><tr><th>Prize</th><th class="num">Remaining</th><th class="num">Originally printed</th></tr></thead>
+<div class="table-wrap"><table><thead><tr><th>Prize</th><th class="num">Remaining</th><th class="num">Originally printed</th></tr></thead>
 <tbody><tr>
   <td>$10</td>
-  <td class="num">1293227</td>
+  <td class="num">1287899</td>
   <td class="num">3024000</td>
 </tr>
 <tr>
   <td>$15</td>
-  <td class="num">322277</td>
+  <td class="num">320919</td>
   <td class="num">756000</td>
 </tr>
 <tr>
   <td>$50</td>
-  <td class="num">107245</td>
+  <td class="num">106825</td>
   <td class="num">252000</td>
 </tr>
 <tr>
   <td>$100</td>
-  <td class="num">153379</td>
+  <td class="num">152754</td>
   <td class="num">359975</td>
 </tr>
 <tr>
   <td>$20</td>
-  <td class="num">1072693</td>
+  <td class="num">1068336</td>
   <td class="num">2520000</td>
 </tr>
 <tr>
   <td>$200</td>
-  <td class="num">14037</td>
+  <td class="num">13996</td>
   <td class="num">32725</td>
 </tr>
 <tr>
   <td>$500</td>
-  <td class="num">6695</td>
+  <td class="num">6669</td>
   <td class="num">15575</td>
 </tr>
 <tr>
   <td>$1,000</td>
-  <td class="num">2956</td>
+  <td class="num">2932</td>
   <td class="num">6300</td>
 </tr>
 <tr>
   <td>$2,000</td>
-  <td class="num">316</td>
+  <td class="num">311</td>
   <td class="num">700</td>
 </tr>
 <tr>
   <td>$10,000</td>
-  <td class="num">109</td>
+  <td class="num">108</td>
   <td class="num">250</td>
 </tr>
 <tr>
@@ -124,20 +131,20 @@ footer .help{font-weight:700;color:var(--ink)}
 </tr>
 <tr>
   <td>$25</td>
-  <td class="num">107184</td>
+  <td class="num">106734</td>
   <td class="num">252000</td>
 </tr>
 <tr>
   <td>$30</td>
-  <td class="num">108255</td>
+  <td class="num">107806</td>
   <td class="num">252000</td>
 </tr>
 <tr>
   <td>$40</td>
-  <td class="num">107108</td>
+  <td class="num">106635</td>
   <td class="num">252000</td>
-</tr></tbody></table>
-<a class="cta" href="https://app.scratchwolf.com/game/ma/521">
+</tr></tbody></table></div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>Is $2,000,000 50x cashword 2025 worth buying right now?</b>
   <span>See its expected value, prize-depletion trend, our forecast of how likely its top prizes
   are to be claimed soon, and how it ranks against every other Massachusetts game — free.</span>
@@ -145,7 +152,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <p class="sub">Prize counts come from the Massachusetts Lottery (<a href="https://www.masslottery.com/games/draw-and-instants/2M-50X-cashword-2025" rel="nofollow noopener">official source</a>) and are recounted every morning.</p>
 <p><a href="https://scratchwolf.com/massachusetts-scratch-offs/">← All Massachusetts scratch-offs</a></p></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

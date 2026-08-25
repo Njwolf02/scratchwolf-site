@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -46,7 +53,7 @@ footer .legal{font-size:12px;line-height:1.6}
 footer .help{font-weight:700;color:var(--ink)}
 .crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Massachusetts scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 132 active Massachusetts Lottery scratch-off games.","url":"https://scratchwolf.com/massachusetts-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Massachusetts scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 132 active Massachusetts Lottery scratch-off games.","url":"https://scratchwolf.com/massachusetts-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-25"}</script>
 </head>
 <body>
 <header><div class="wrap"><a href="https://scratchwolf.com/">ScratchWolf</a></div></header>
@@ -55,6 +62,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <h1>Massachusetts Scratch-Off Odds &amp; Prizes Remaining</h1>
 <p class="sub">All 132 active Massachusetts Lottery scratch-off games, with top prizes still
 unclaimed and the overall odds printed on each ticket. Recounted every morning.</p>
+<div class="table-wrap">
 <table>
 <thead><tr><th>Game</th><th class="num">Price</th><th class="num">Top prize</th>
 <th class="num">Overall odds</th><th class="num">Top prizes left</th></tr></thead>
@@ -235,13 +243,6 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">1 of 3</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100x-552/">100x</a></td>
-  <td class="num">$10</td>
-  <td class="num">$4,000,000</td>
-  <td class="num">1 in 3.47</td>
-  <td class="num">2 of 3</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/4-000-000-jumbo-cash-341/">$4,000,000 jumbo cash</a></td>
   <td class="num">$10</td>
   <td class="num">$4,000,000</td>
@@ -257,6 +258,13 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/4-000-000-bonus-money-457/">$4,000,000 bonus money</a></td>
+  <td class="num">$10</td>
+  <td class="num">$4,000,000</td>
+  <td class="num">1 in 3.47</td>
+  <td class="num">1 of 3</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100x-552/">100x</a></td>
   <td class="num">$10</td>
   <td class="num">$4,000,000</td>
   <td class="num">1 in 3.47</td>
@@ -508,18 +516,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">0 of 3</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/500-000-cashword-corners-2023-356/">$500,000 cashword corners 2023</a></td>
-  <td class="num">$5</td>
-  <td class="num">$500,000</td>
-  <td class="num">1 in 4.16</td>
-  <td class="num">1 of 4</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/500-000-color-blast-555/">$500,000 color blast</a></td>
   <td class="num">$5</td>
   <td class="num">$500,000</td>
   <td class="num">1 in 4.16</td>
   <td class="num">3 of 3</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/500-000-cashword-corners-2023-356/">$500,000 cashword corners 2023</a></td>
+  <td class="num">$5</td>
+  <td class="num">$500,000</td>
+  <td class="num">1 in 4.16</td>
+  <td class="num">1 of 4</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/500-000-cashword-corners-381/">$500,000 cashword corners</a></td>
@@ -592,18 +600,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">6 of 6</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100-000-double-play-557/">$100,000 double play</a></td>
-  <td class="num">$2</td>
-  <td class="num">$100,000</td>
-  <td class="num">1 in 5.90</td>
-  <td class="num">4 of 4</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/20x-486/">20x</a></td>
   <td class="num">$2</td>
   <td class="num">$100,000</td>
   <td class="num">1 in 4.59</td>
   <td class="num">1 of 3</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100-000-double-play-557/">$100,000 double play</a></td>
+  <td class="num">$2</td>
+  <td class="num">$100,000</td>
+  <td class="num">1 in 5.90</td>
+  <td class="num">3 of 4</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100-000-two-for-the-money-507/">$100,000 two for the money</a></td>
@@ -613,18 +621,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">3 of 6</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/1-000-000-winter-winnings-515/">$1,000,000 winter winnings</a></td>
-  <td class="num">$2</td>
-  <td class="num">$100,000</td>
-  <td class="num">1 in 4.59</td>
-  <td class="num">1 of 3</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/100-000-max-winnings-508/">$100,000 max winnings</a></td>
   <td class="num">$10</td>
   <td class="num">$100,000</td>
   <td class="num">1 in 3.47</td>
   <td class="num">26 of 80</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/1-000-000-winter-winnings-515/">$1,000,000 winter winnings</a></td>
+  <td class="num">$2</td>
+  <td class="num">$100,000</td>
+  <td class="num">1 in 4.59</td>
+  <td class="num">1 of 3</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/20x-550/">20x</a></td>
@@ -876,49 +884,35 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$10</td>
   <td class="num">$2,500</td>
   <td class="num">1 in 3.50</td>
-  <td class="num">109 of 320</td>
+  <td class="num">107 of 320</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/1-000-a-week-for-life-480/">$1,000 a week for life</a></td>
   <td class="num">$5</td>
   <td class="num">$1,000</td>
   <td class="num">1 in 4.31</td>
-  <td class="num">32 of 202</td>
+  <td class="num">31 of 202</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/50-100-and-500-blowout-547/">$50, $100, and $500 blowout</a></td>
   <td class="num">$10</td>
   <td class="num">$500</td>
   <td class="num">1 in 8.86</td>
-  <td class="num">29085 of 29568</td>
+  <td class="num">29050 of 29568</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/500-mania-513/">$500 mania</a></td>
   <td class="num">$10</td>
   <td class="num">$500</td>
   <td class="num">1 in 3.46</td>
-  <td class="num">9882 of 40509</td>
+  <td class="num">9831 of 40509</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/instant-500s-408/">instant $500s</a></td>
   <td class="num">$10</td>
   <td class="num">$500</td>
   <td class="num">1 in 3.46</td>
-  <td class="num">649 of 72016</td>
-</tr>
-<tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/50-100-and-500-blowout-477/">$50, $100 and $500 blowout</a></td>
-  <td class="num">$10</td>
-  <td class="num">$500</td>
-  <td class="num">1 in 8.86</td>
-  <td class="num">577 of 29568</td>
-</tr>
-<tr>
-  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/merry-mint-blowout-518/">merry-mint blowout</a></td>
-  <td class="num">$10</td>
-  <td class="num">$500</td>
-  <td class="num">1 in 8.86</td>
-  <td class="num">59 of 12936</td>
+  <td class="num">647 of 72016</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/50-100-and-500-blowout-451/">$50, $100 and $500 blowout</a></td>
@@ -926,6 +920,20 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$500</td>
   <td class="num">1 in 8.86</td>
   <td class="num">72 of 29568</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/50-100-and-500-blowout-477/">$50, $100 and $500 blowout</a></td>
+  <td class="num">$10</td>
+  <td class="num">$500</td>
+  <td class="num">1 in 8.86</td>
+  <td class="num">562 of 29568</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/merry-mint-blowout-518/">merry-mint blowout</a></td>
+  <td class="num">$10</td>
+  <td class="num">$500</td>
+  <td class="num">1 in 8.86</td>
+  <td class="num">59 of 12936</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/merry-bright-blowout-463/">merry &amp; bright blowout</a></td>
@@ -939,14 +947,14 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$250</td>
   <td class="num">1 in 9.15</td>
-  <td class="num">11469 of 18200</td>
+  <td class="num">11450 of 18200</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/ma-250-548/">ma 250</a></td>
   <td class="num">$5</td>
   <td class="num">$250</td>
   <td class="num">1 in 9.13</td>
-  <td class="num">3252 of 9100</td>
+  <td class="num">3197 of 9100</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/25-50-and-250-celebration-blowout-465/">$25, $50 and $250 celebration blowout</a></td>
@@ -960,7 +968,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$250</td>
   <td class="num">1 in 9.15</td>
-  <td class="num">251 of 10920</td>
+  <td class="num">250 of 10920</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/massachusetts-scratch-offs/25-50-and-250-celebration-blowout-482/">$25, $50 and $250 celebration blowout</a></td>
@@ -985,7 +993,8 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 </tr>
 </tbody>
 </table>
-<a class="cta" href="https://app.scratchwolf.com/browse?state=MA">
+</div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>See which of these are actually worth buying</b>
   <span>ScratchWolf ranks every Massachusetts game by expected value and prize depletion, and forecasts
   how likely each game's top prizes are to be claimed in the next two weeks — free.</span>
@@ -993,7 +1002,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 <h2>Other states</h2>
 <ul class="grid"><li><a href="https://scratchwolf.com/arkansas-scratch-offs/">Arkansas</a></li><li><a href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</a></li><li><a href="https://scratchwolf.com/california-scratch-offs/">California</a></li><li><a href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</a></li><li><a href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</a></li><li><a href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</a></li><li><a href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</a></li><li><a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a></li><li><a href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</a></li><li><a href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</a></li><li><a href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</a></li><li><a href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</a></li><li><a href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</a></li><li><a href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</a></li><li><a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a></li><li><a href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</a></li><li><a href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</a></li><li><a href="https://scratchwolf.com/maine-scratch-offs/">Maine</a></li><li><a href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</a></li><li><a href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</a></li><li><a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a></li><li><a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a></li><li><a href="https://scratchwolf.com/montana-scratch-offs/">Montana</a></li><li><a href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</a></li><li><a href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</a></li><li><a href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</a></li><li><a href="https://scratchwolf.com/new-jersey-scratch-offs/">New Jersey</a></li><li><a href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</a></li><li><a href="https://scratchwolf.com/new-york-scratch-offs/">New York</a></li><li><a href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</a></li><li><a href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</a></li><li><a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a></li><li><a href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</a></li><li><a href="https://scratchwolf.com/rhode-island-scratch-offs/">Rhode Island</a></li><li><a href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</a></li><li><a href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</a></li><li><a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a></li><li><a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a></li><li><a href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</a></li><li><a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a></li><li><a href="https://scratchwolf.com/washington-scratch-offs/">Washington</a></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a></li><li><a href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</a></li></ul></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

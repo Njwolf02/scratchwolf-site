@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -61,105 +68,105 @@ footer .help{font-weight:700;color:var(--ink)}
   <div><dt>Top prizes left</dt><dd>3 / 7</dd></div>
 </dl>
 <h2>Prizes remaining by tier</h2>
-<table><thead><tr><th>Prize</th><th class="num">Remaining</th><th class="num">Originally printed</th></tr></thead>
+<div class="table-wrap"><table><thead><tr><th>Prize</th><th class="num">Remaining</th><th class="num">Originally printed</th></tr></thead>
 <tbody><tr>
   <td>$5</td>
-  <td class="num">45490</td>
+  <td class="num">45460</td>
   <td class="num">93856</td>
 </tr>
 <tr>
   <td>$5</td>
-  <td class="num">59510</td>
+  <td class="num">59439</td>
   <td class="num">140789</td>
 </tr>
 <tr>
   <td>$10</td>
-  <td class="num">12963</td>
+  <td class="num">12946</td>
   <td class="num">29310</td>
 </tr>
 <tr>
   <td>$10</td>
-  <td class="num">22103</td>
+  <td class="num">22079</td>
   <td class="num">52769</td>
 </tr>
 <tr>
   <td>$10</td>
-  <td class="num">17146</td>
+  <td class="num">17121</td>
   <td class="num">41082</td>
 </tr>
 <tr>
   <td>$10</td>
-  <td class="num">18051</td>
+  <td class="num">18029</td>
   <td class="num">41052</td>
 </tr>
 <tr>
   <td>$15</td>
-  <td class="num">10019</td>
+  <td class="num">10006</td>
   <td class="num">23464</td>
 </tr>
 <tr>
   <td>$15</td>
-  <td class="num">9772</td>
+  <td class="num">9762</td>
   <td class="num">23464</td>
 </tr>
 <tr>
   <td>$15</td>
-  <td class="num">9749</td>
+  <td class="num">9736</td>
   <td class="num">23464</td>
 </tr>
 <tr>
   <td>$15</td>
-  <td class="num">9776</td>
+  <td class="num">9765</td>
   <td class="num">23464</td>
 </tr>
 <tr>
   <td>$20</td>
-  <td class="num">4933</td>
+  <td class="num">4930</td>
   <td class="num">11747</td>
 </tr>
 <tr>
   <td>$20</td>
-  <td class="num">4860</td>
+  <td class="num">4854</td>
   <td class="num">11742</td>
 </tr>
 <tr>
   <td>$20</td>
-  <td class="num">4827</td>
+  <td class="num">4822</td>
   <td class="num">11717</td>
 </tr>
 <tr>
   <td>$20</td>
-  <td class="num">7319</td>
+  <td class="num">7313</td>
   <td class="num">17593</td>
 </tr>
 <tr>
   <td>$25</td>
-  <td class="num">2426</td>
+  <td class="num">2422</td>
   <td class="num">5846</td>
 </tr>
 <tr>
   <td>$25</td>
-  <td class="num">7284</td>
+  <td class="num">7278</td>
   <td class="num">17618</td>
 </tr>
 <tr>
   <td>$25</td>
-  <td class="num">4871</td>
+  <td class="num">4867</td>
   <td class="num">11747</td>
 </tr>
 <tr>
   <td>$25</td>
-  <td class="num">7467</td>
+  <td class="num">7463</td>
   <td class="num">17593</td>
 </tr>
 <tr>
   <td>$50</td>
-  <td class="num">1585</td>
+  <td class="num">1583</td>
   <td class="num">3909</td>
 </tr>
 <tr>
   <td>$50</td>
-  <td class="num">1618</td>
+  <td class="num">1617</td>
   <td class="num">3929</td>
 </tr>
 <tr>
@@ -174,7 +181,7 @@ footer .help{font-weight:700;color:var(--ink)}
 </tr>
 <tr>
   <td>$50</td>
-  <td class="num">846</td>
+  <td class="num">845</td>
   <td class="num">1989</td>
 </tr>
 <tr>
@@ -193,11 +200,6 @@ footer .help{font-weight:700;color:var(--ink)}
   <td class="num">598</td>
 </tr>
 <tr>
-  <td>$100</td>
-  <td class="num">234</td>
-  <td class="num">580</td>
-</tr>
-<tr>
   <td>$500</td>
   <td class="num">41</td>
   <td class="num">98</td>
@@ -211,8 +213,8 @@ footer .help{font-weight:700;color:var(--ink)}
   <td>$50,000</td>
   <td class="num">3</td>
   <td class="num">7</td>
-</tr></tbody></table>
-<a class="cta" href="https://app.scratchwolf.com/game/ri/1417">
+</tr></tbody></table></div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>Is SUPER CROSSWORD worth buying right now?</b>
   <span>See its expected value, prize-depletion trend, our forecast of how likely its top prizes
   are to be claimed soon, and how it ranks against every other Rhode Island game — free.</span>
@@ -220,7 +222,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <p class="sub">Prize counts come from the Rhode Island Lottery (<a href="https://ris.p1.awc.lotteryservices.net/api/v1/instant-games/games/?size=1000" rel="nofollow noopener">official source</a>) and are recounted every morning.</p>
 <p><a href="https://scratchwolf.com/rhode-island-scratch-offs/">← All Rhode Island scratch-offs</a></p></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

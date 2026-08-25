@@ -25,6 +25,13 @@ header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-
 h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
 .sub{color:var(--muted);margin:0 0 28px;font-size:17px}
 table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
 th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
@@ -46,7 +53,7 @@ footer .legal{font-size:12px;line-height:1.6}
 footer .help{font-weight:700;color:var(--ink)}
 .crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Arkansas scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 64 active Arkansas Lottery scratch-off games.","url":"https://scratchwolf.com/arkansas-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Arkansas scratch-off prizes remaining","description":"Top prizes remaining and overall odds for 64 active Arkansas Lottery scratch-off games.","url":"https://scratchwolf.com/arkansas-scratch-offs/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-08-25"}</script>
 </head>
 <body>
 <header><div class="wrap"><a href="https://scratchwolf.com/">ScratchWolf</a></div></header>
@@ -55,6 +62,7 @@ footer .help{font-weight:700;color:var(--ink)}
 <h1>Arkansas Scratch-Off Odds &amp; Prizes Remaining</h1>
 <p class="sub">All 64 active Arkansas Lottery scratch-off games, with top prizes still
 unclaimed and the overall odds printed on each ticket. Recounted every morning.</p>
+<div class="table-wrap">
 <table>
 <thead><tr><th>Game</th><th class="num">Price</th><th class="num">Top prize</th>
 <th class="num">Overall odds</th><th class="num">Top prizes left</th></tr></thead>
@@ -81,18 +89,18 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">2 of 4</td>
 </tr>
 <tr>
-  <td><a href="https://scratchwolf.com/arkansas-scratch-offs/350-000-payout-908/">$350,000 Payout</a></td>
-  <td class="num">$20</td>
-  <td class="num">$350,000</td>
-  <td class="num">1 in 2.97</td>
-  <td class="num">3 of 3</td>
-</tr>
-<tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/350-000-jackpot-855/">$350,000 Jackpot</a></td>
   <td class="num">$20</td>
   <td class="num">$350,000</td>
   <td class="num">1 in 2.97</td>
   <td class="num">1 of 3</td>
+</tr>
+<tr>
+  <td><a href="https://scratchwolf.com/arkansas-scratch-offs/350-000-payout-908/">$350,000 Payout</a></td>
+  <td class="num">$20</td>
+  <td class="num">$350,000</td>
+  <td class="num">1 in 2.97</td>
+  <td class="num">2 of 3</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/xtreme-money-838/">Xtreme Money</a></td>
@@ -337,7 +345,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$10</td>
   <td class="num">$10,000</td>
   <td class="num">1 in 3.01</td>
-  <td class="num">139 of 160</td>
+  <td class="num">138 of 160</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/peppermint-cash-multiplier-866/">Peppermint Cash Multiplier</a></td>
@@ -428,14 +436,14 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$5</td>
   <td class="num">$500</td>
   <td class="num">1 in 3.84</td>
-  <td class="num">2890 of 4410</td>
+  <td class="num">2881 of 4410</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/500-stacked-875/">$500 Stacked</a></td>
   <td class="num">$5</td>
   <td class="num">$500</td>
   <td class="num">1 in 3.84</td>
-  <td class="num">938 of 3887</td>
+  <td class="num">934 of 3887</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/holiday-cash-864/">Holiday Cash</a></td>
@@ -449,7 +457,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$2</td>
   <td class="num">$250</td>
   <td class="num">1 in 4.16</td>
-  <td class="num">579 of 1487</td>
+  <td class="num">573 of 1487</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/win-200-856/">Win $200!</a></td>
@@ -470,7 +478,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$3</td>
   <td class="num">$200</td>
   <td class="num">1 in 3.70</td>
-  <td class="num">320 of 1050</td>
+  <td class="num">319 of 1050</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/100-stacked-873/">$100 Stacked</a></td>
@@ -484,7 +492,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$10</td>
   <td class="num">$100</td>
   <td class="num">1 in 8.86</td>
-  <td class="num">23500 of 78608</td>
+  <td class="num">23418 of 78608</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/neon-100-847/">Neon $100</a></td>
@@ -498,7 +506,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
   <td class="num">$1</td>
   <td class="num">$50</td>
   <td class="num">1 in 4.64</td>
-  <td class="num">3248 of 4617</td>
+  <td class="num">3237 of 4617</td>
 </tr>
 <tr>
   <td><a href="https://scratchwolf.com/arkansas-scratch-offs/instant-million-868/">Instant Million</a></td>
@@ -509,7 +517,8 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 </tr>
 </tbody>
 </table>
-<a class="cta" href="https://app.scratchwolf.com/browse?state=AR">
+</div>
+<a class="cta" href="https://scratchwolf.com/mobile-app/">
   <b>See which of these are actually worth buying</b>
   <span>ScratchWolf ranks every Arkansas game by expected value and prize depletion, and forecasts
   how likely each game's top prizes are to be claimed in the next two weeks — free.</span>
@@ -517,7 +526,7 @@ unclaimed and the overall odds printed on each ticket. Recounted every morning.<
 <h2>Other states</h2>
 <ul class="grid"><li><a href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</a></li><li><a href="https://scratchwolf.com/california-scratch-offs/">California</a></li><li><a href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</a></li><li><a href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</a></li><li><a href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</a></li><li><a href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</a></li><li><a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a></li><li><a href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</a></li><li><a href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</a></li><li><a href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</a></li><li><a href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</a></li><li><a href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</a></li><li><a href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</a></li><li><a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a></li><li><a href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</a></li><li><a href="https://scratchwolf.com/massachusetts-scratch-offs/">Massachusetts</a></li><li><a href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</a></li><li><a href="https://scratchwolf.com/maine-scratch-offs/">Maine</a></li><li><a href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</a></li><li><a href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</a></li><li><a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a></li><li><a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a></li><li><a href="https://scratchwolf.com/montana-scratch-offs/">Montana</a></li><li><a href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</a></li><li><a href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</a></li><li><a href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</a></li><li><a href="https://scratchwolf.com/new-jersey-scratch-offs/">New Jersey</a></li><li><a href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</a></li><li><a href="https://scratchwolf.com/new-york-scratch-offs/">New York</a></li><li><a href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</a></li><li><a href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</a></li><li><a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a></li><li><a href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</a></li><li><a href="https://scratchwolf.com/rhode-island-scratch-offs/">Rhode Island</a></li><li><a href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</a></li><li><a href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</a></li><li><a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a></li><li><a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a></li><li><a href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</a></li><li><a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a></li><li><a href="https://scratchwolf.com/washington-scratch-offs/">Washington</a></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a></li><li><a href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</a></li></ul></main>
 <footer><div class="wrap">
-<p>Prize counts last recounted <time datetime="2026-08-24">August 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-08-25">August 25, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative

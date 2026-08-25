@@ -27,6 +27,14 @@
     .hero h1 { font-size: 52px; line-height: 1.04; font-weight: 800; color: var(--navy); margin-top: 14px; letter-spacing: -0.5px; }
     .hero .sub { font-size: 18px; color: var(--muted); margin-top: 20px; max-width: 480px; }
     .badge { display: inline-block; margin-top: 28px; border: 1.5px solid var(--navy); color: var(--navy); font-weight: 700; font-size: 14px; padding: 11px 20px; }
+    .badge-cta { background: var(--navy); color: #fff; text-decoration: none; }
+    .badge-cta:hover { background: var(--green); border-color: var(--green); }
+    .badge-note { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); }
+    .badge-note a { color: var(--muted); }
+    .badge-note a:hover { color: var(--green); }
+    .states { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 18px; margin-top: 18px; }
+    .states a { color: var(--ink); font-size: 14px; text-decoration: none; border-bottom: 1px solid var(--rule); padding: 5px 0; display: block; }
+    .states a:hover { color: var(--green); }
     .phone { flex: 0 0 280px; margin: 0 auto; }
     .phone .frame { border: 10px solid var(--navy); border-radius: 38px; overflow: hidden; box-shadow: 14px 14px 0 rgba(15,23,42,.08); }
     .phone img { display: block; width: 100%; }
@@ -49,6 +57,13 @@
     footer a { color: var(--navy); }
     @media (max-width: 640px) { .hero h1 { font-size: 36px; } .phone { flex-basis: 230px; } }
   </style>
+  <link rel="canonical" href="https://scratchwolf.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="ScratchWolf · Scratch-Off Odds & Analysis"/>
+  <meta property="og:description" content="ScratchWolf recounts the remaining prizes on every scratch-off game in 44 states each morning, so you know which tickets are worth buying before you spend."/>
+  <meta property="og:url" content="https://scratchwolf.com/"/>
+  <meta property="og:site_name" content="ScratchWolf"/>
+  <meta name="twitter:card" content="summary"/>
 </head>
 <body>
   <nav>
@@ -67,7 +82,8 @@
         <div class="kicker">Scratch-off odds &amp; analysis</div>
         <h1>The big prize might already be gone. We check.</h1>
         <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each morning. That covers 3,000 and some games across 44 states, each one scored on the actual math.</p>
-        <span class="badge">Coming soon · App Store &amp; Google Play</span>
+        <a class="badge badge-cta" href="https://scratchwolf.com/mobile-app/">See what's coming &rarr;</a>
+        <span class="badge-note">Web app launching shortly &middot; iOS &amp; Android to follow</span>
       </div>
       <figure class="phone">
         <div class="frame"><img src="/assets/app-screen.png" alt="ScratchWolf game analysis screen showing a value score of 79 for a Kentucky scratch-off" /></div>
@@ -89,6 +105,57 @@
     </div>
   </section>
 
+  <section class="states-section">
+    <div class="wrap">
+      <h2>Every state we track</h2>
+      <p>Odds and remaining prizes for every active scratch-off, straight from each state lottery's own published data.</p>
+      <div class="states"><a href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</a>
+        <a href="https://scratchwolf.com/arkansas-scratch-offs/">Arkansas</a>
+        <a href="https://scratchwolf.com/california-scratch-offs/">California</a>
+        <a href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</a>
+        <a href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</a>
+        <a href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</a>
+        <a href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</a>
+        <a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a>
+        <a href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</a>
+        <a href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</a>
+        <a href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</a>
+        <a href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</a>
+        <a href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</a>
+        <a href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</a>
+        <a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a>
+        <a href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</a>
+        <a href="https://scratchwolf.com/massachusetts-scratch-offs/">Massachusetts</a>
+        <a href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</a>
+        <a href="https://scratchwolf.com/maine-scratch-offs/">Maine</a>
+        <a href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</a>
+        <a href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</a>
+        <a href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</a>
+        <a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a>
+        <a href="https://scratchwolf.com/montana-scratch-offs/">Montana</a>
+        <a href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</a>
+        <a href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</a>
+        <a href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</a>
+        <a href="https://scratchwolf.com/new-jersey-scratch-offs/">New Jersey</a>
+        <a href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</a>
+        <a href="https://scratchwolf.com/new-york-scratch-offs/">New York</a>
+        <a href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</a>
+        <a href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</a>
+        <a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a>
+        <a href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</a>
+        <a href="https://scratchwolf.com/rhode-island-scratch-offs/">Rhode Island</a>
+        <a href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</a>
+        <a href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</a>
+        <a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a>
+        <a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a>
+        <a href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</a>
+        <a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a>
+        <a href="https://scratchwolf.com/washington-scratch-offs/">Washington</a>
+        <a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a>
+        <a href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</a></div>
+    </div>
+  </section>
+
   <section class="edu">
     <div class="wrap">
       <h2>A data tool, not a gambling service</h2>
@@ -102,7 +169,7 @@
 
   <footer>
     <div class="wrap">
-      <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> · <span>Built by <a href="https://wolfdigitable.com">Wolf Digitable</a></span>
+      <a href="https://scratchwolf.com/mobile-app/">Mobile app</a> &middot; <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> · <span>Built by <a href="https://wolfdigitable.com">Wolf Digitable</a></span>
     </div>
   </footer>
 </body>
