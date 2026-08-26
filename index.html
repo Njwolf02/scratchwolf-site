@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ScratchWolf · Scratch-Off Odds &amp; Analysis</title>
   <meta name="description" content="ScratchWolf recounts the remaining prizes on every scratch-off game in 44 states each morning, so you know which tickets are worth buying before you spend." />
+  <!-- Returning-visitor redirect.
+       Someone who has already used the app should not be shown the pitch again and made to click
+       through it — that is the one genuinely bad step in the funnel, and it hits the most engaged
+       people hardest. This is only possible because the app now lives on THIS hostname, so the
+       marketing page can read the app's own stored settings.
+
+       Deliberate properties:
+       • HOMEPAGE ONLY. State and game pages are search landing pages — someone who searched for
+         "texas scratch off odds" wants THAT page, and bouncing them to the app would be hostile
+         and would read as pogo-sticking to Google.
+       • Not cloaking. The HTML served is identical for everyone; the redirect fires only when the
+         browser already holds app state from a previous visit. A crawler has none, so it never
+         triggers and always indexes the real page.
+       • replace(), not assign() — the back button must return to wherever they came from, not
+         bounce them forward again.
+       • ?stay=1 escapes it, so the marketing page stays reachable for anyone (including you)
+         who wants to look at it.
+       • Inline and FIRST in head so it runs before paint; a redirect after render is a visible
+         flash of the wrong page. -->
+  <script>
+    (function () {
+      try {
+        if (location.search.indexOf('stay=1') !== -1) return;
+        var raw = localStorage.getItem('app-settings-storage');
+        if (!raw) return;
+        var s = JSON.parse(raw);
+        if (s && s.state && s.state.settings && s.state.settings.hasOnboarded === true) {
+          location.replace('/app/');
+        }
+      } catch (e) { /* private mode, blocked storage, bad JSON — just show the page */ }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
