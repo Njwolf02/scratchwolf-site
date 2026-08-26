@@ -54,6 +54,16 @@ td a{color:var(--navy);font-weight:600}
 .cta{display:block;margin:34px 0;padding:22px 24px;background:var(--navy);color:#fff;text-decoration:none;border-radius:2px}
 .cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
 .cta span{color:#cbd5e1;font-size:15px}
+/* Above-the-fold bar. Compact on purpose: these pages must RANK, so the thing a visitor searched
+   for has to stay visible. It orients someone who landed here from Google and gives them the one
+   next step, without becoming an interstitial that buries the content. min-height 44px is the
+   documented minimum tap target. */
+.appbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  margin:18px 0 26px;padding:14px 18px;background:#f1f5f9;border-left:3px solid var(--navy);border-radius:2px}
+.appbar p{font-size:14.5px;color:#334155;margin:0;flex:1 1 260px;line-height:1.45}
+.appbar a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--navy);
+  color:#fff;text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;white-space:nowrap}
+.appbar a:hover{background:#1e293b}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:24px 0 36px;padding:0;list-style:none}
 .grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:#fff}
 .grid a:hover{border-color:var(--navy)}
@@ -83,6 +93,10 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
 <p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</a> › Cash Game</p>
 <h1>Cash Game</h1>
 <p class="sub">Oregon Lottery scratch-off · Game #1580</p>
+<div class="appbar">
+  <p>These are the Oregon Lottery's own published numbers for this ticket. The app scores it against every other Oregon game and tracks how fast its prizes are going.</p>
+  <a href="https://scratchwolf.com/app/game/or/1580">Score this game →</a>
+</div>
 <dl class="facts">
   <div><dt>Ticket price</dt><dd>$10</dd></div>
   <div><dt>Top prize</dt><dd>$100,000</dd></div>
