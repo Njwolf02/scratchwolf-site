@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>About ScratchWolf — where the scratch-off data comes from</title>
+<meta name="description" content="How ScratchWolf works: prize counts and odds for 3,303 scratch-off games across 44 states, recounted every morning from official state lottery sources."/>
+<link rel="canonical" href="https://scratchwolf.com/about/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="About ScratchWolf — where the scratch-off data comes from"/>
+<meta property="og:description" content="How ScratchWolf works: prize counts and odds for 3,303 scratch-off games across 44 states, recounted every morning from official state lottery sources."/>
+<meta property="og:url" content="https://scratchwolf.com/about/"/>
+<meta property="og:site_name" content="ScratchWolf"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:image" content="https://scratchwolf.com/assets/og-image.png"/>
+<meta name="twitter:image" content="https://scratchwolf.com/assets/og-image.png"/>
+<link rel="icon" href="https://scratchwolf.com/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0F172A;--green:#0e9f6e;--paper:#faf9f6;--ink:#1c2434;--muted:#5b6472;--rule:#e4e1d8}
+*{box-sizing:border-box}body{margin:0;font-family:'Public Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--rule);padding:18px 0}
+header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-weight:800;font-size:19px;
+  display:inline-flex;align-items:center;gap:9px}
+header a svg{width:26px;height:26px;flex:0 0 26px}
+/* Shape-based assets outperform every other kind of distinctive asset, and this mark appeared on
+   the hand-authored landing page ONLY — the 3,343 generated pages, which are the ones search
+   traffic actually lands on, carried a text wordmark and no shape at all. */
+.markline{display:flex;align-items:center;gap:10px;margin:34px 0 0}
+.markline svg{width:20px;height:20px;flex:0 0 20px;opacity:.9}
+.markline h2{margin:0}
+.gnum{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+footer .fmark{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+footer .fmark svg{width:20px;height:20px}
+footer .fmark b{font-family:Fraunces,serif;font-size:15px;color:var(--navy)}
+h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
+.sub{color:var(--muted);margin:0 0 28px;font-size:17px}
+table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td a{color:var(--navy);font-weight:600}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cta{display:block;margin:34px 0;padding:22px 24px;background:var(--navy);color:#fff;text-decoration:none;border-radius:2px}
+.cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
+.cta span{color:#cbd5e1;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:24px 0 36px;padding:0;list-style:none}
+.grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:#fff}
+.grid a:hover{border-color:var(--navy)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0}
+.facts div{background:#fff;padding:16px}
+.facts dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.facts dd{margin:6px 0 0;font-size:22px;font-family:Fraunces,serif;color:var(--navy)}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+footer p{margin:0 0 10px}
+footer .legal{font-size:12px;line-height:1.6}
+footer .help{font-weight:700;color:var(--ink)}
+.crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About ScratchWolf — where the scratch-off data comes from","description":"How ScratchWolf works: prize counts and odds for 3,303 scratch-off games across 44 states, recounted every morning from official state lottery sources.","url":"https://scratchwolf.com/about/","publisher":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-755E8P2420"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']});
+gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+gtag('js',new Date());gtag('config','G-755E8P2420');
+</script>
+</head>
+<body>
+<header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a></div></header>
+<main class="wrap"><h1>Where these numbers come from</h1>
+<p class="sub">ScratchWolf recounts the unclaimed prizes on every active scratch-off game in
+44 states, every morning, straight from each state lottery's own published data. This page
+explains how that works and what we deliberately do not do.</p>
+
+<h2>The data</h2>
+<ul>
+  <li><b>Official sources only.</b> Every figure is read from the state lottery's own published
+      pages or data feeds. Each game page on this site links to the exact source it came from, so
+      you can check any number yourself.</li>
+  <li><b>Recounted every morning.</b> A full pass runs daily and the footer of every page carries the
+      date it last completed — so if it ever stops, the date visibly stops advancing instead of the
+      site quietly claiming to be current.</li>
+  <li><b>Measured accuracy.</b> Stored odds were verified against the exact pages the states served,
+      game by game: <b>99.75% matched</b>, with 35 of 38 checkable states at exactly 100%. The
+      handful that did not match were cases where the source itself published a typo.</li>
+  <li><b>Gaps are shown as gaps.</b> Some states publish less than others — Tennessee publishes no
+      per-tier odds at all, so we cannot compute an expected value there and we say so rather than
+      inventing one. A missing number is always better than a guessed one.</li>
+</ul>
+
+<h2>What ScratchWolf is not</h2>
+<ul>
+  <li><b>Not a way to buy tickets.</b> We do not sell tickets, take wagers, or pay prizes. We are an
+      information and education tool built on public data.</li>
+  <li><b>Not a prediction.</b> Nothing here forecasts a winner. Scratch-off outcomes are already
+      fixed when the tickets are printed; all anyone can know is how much of a prize pool is left.
+      Every lottery game has a negative expected return over time.</li>
+  <li><b>Not affiliated with any lottery.</b> No state lottery endorses, reviews or supplies this
+      site beyond what it publishes to the public.</li>
+</ul>
+
+<h2>What it actually helps with</h2>
+<p>Two tickets on the same shelf at the same price can differ a lot in how much prize money is still
+unclaimed behind them. That is public information, but it is scattered across a different website
+for every state and changes daily. ScratchWolf collects it, keeps it current, and puts the games
+side by side so the comparison takes seconds instead of an afternoon.</p>
+
+<h2>Who runs it</h2>
+<p>ScratchWolf is built and operated by Wolf Digitable. Questions, corrections, or a number that
+looks wrong: <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> — corrections to
+the data are genuinely welcome, since every figure here is checkable against a source we link.</p>
+
+<a class="cta" href="https://scratchwolf.com/app">
+  <b>See your state’s scratch-offs</b>
+  <span>3,303 active games across 44 states, recounted this morning.</span>
+</a></main>
+<footer><div class="wrap">
+<div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
+<p>Prize counts last recounted <time datetime="2026-08-26">August 26, 2026</time> from official state
+lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
+<p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
+collected from official public sources and may be delayed; all lottery games have a negative
+expected return over time and results are never guaranteed. Nothing here is a prediction or a
+promise of winning. For adults 18+ (19/21 where required).</p>
+<p class="legal help">If gambling is causing you harm, call the National Problem Gambling Helpline
+at <a href="tel:1-800-522-4700">1-800-522-4700</a> (1-800-GAMBLER) — free, confidential, 24/7.</p>
+<p class="legal"><a href="https://scratchwolf.com/about/">About</a> · <a href="https://scratchwolf.com/privacy.html">Privacy</a> · <a href="https://scratchwolf.com/terms.html">Terms</a></p>
+</div></footer>
+</body>
+</html>
