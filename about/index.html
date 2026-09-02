@@ -110,23 +110,24 @@ explains how that works and what we deliberately do not do.</p>
       inventing one. A missing number is always better than a guessed one.</li>
 </ul>
 
-<h2>The models</h2>
-<p>Two machine-learning models run over the same daily data, retrained every night and validated on
-data they were not trained on. They exist because a prize count tells you where a game stands
+<h2>The model</h2>
+<p>One machine-learning model runs over the same daily data, retrained every night and validated on
+data it was not trained on. It exists because a prize count tells you where a game stands
 <em>today</em> and says nothing about where it is heading.</p>
-<ul>
-  <li><b>Claim forecast.</b> Estimates how likely each game is to lose a top prize in the next two
-      weeks. Scored on held-out data at <b>0.92 AUC</b>, and it reaches every state we cover —
-      including the ones that publish too little for an expected value, where it is the only
-      forward-looking signal available.</li>
-  <li><b>Steadiness score.</b> Ranks games by expected value <em>minus</em> the risk that value
-      collapses. In a walk-forward backtest this cut the rate at which the top pick collapsed from
-      4.3% to 1.3%, while average return stayed level.</li>
-</ul>
-<p><b>Steadier is the claim, not higher-returning.</b> The difference in average return was inside
-the noise; the difference in collapses was not. We publish it that way round because that is what
-the measurement showed, and a model that is oversold once is never trusted again.</p>
-<p>What they are not: neither model predicts a winning ticket, and no model can. See below.</p>
+<p><b>AI Watch</b> estimates how likely each game is to lose a top prize in the next two weeks, and
+flags the ones closest to it. Last scored at <b>0.92 AUC</b> on roughly 187,000 held-out
+observations, covering <b>all 44 states</b> — including the ones that publish too little for us to
+compute a ticket's value at all, where it is the only forward-looking signal there is.</p>
+<p><b>It is a watchlist, not a buy list</b>, and that distinction is measured rather than stylistic.
+Ordering games by this score was tested against three separate measures of whether it produced
+better picks and never beat plain value ranking; on one it was worse. The model is good at spotting
+which games are about to lose a jackpot and poor at deciding what to buy, so that is exactly what we
+use it for.</p>
+<p>We also retired a second model rather than keep it running. It ranked games by value minus the
+risk that value collapsed, and it worked when it was built — until the thing it predicted became
+rare enough that the adjustment stopped helping, and on its last run it was making the pick slightly
+worse. Keeping it would have been easy and dishonest.</p>
+<p>What it is not: no model here predicts a winning ticket, and none can. See below.</p>
 
 <h2>What ScratchWolf is not</h2>
 <ul>
