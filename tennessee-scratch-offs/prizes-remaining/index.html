@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tennessee Scratch-Off Prizes Remaining — Top Prizes Left Today</title>
+<meta name="description" content="How many top prizes are still unclaimed on every Tennessee scratch-off, recounted every morning from official Tennessee Lottery data. See which games still have their jackpots — and which are already gone."/>
+<link rel="canonical" href="https://scratchwolf.com/tennessee-scratch-offs/prizes-remaining/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Tennessee Scratch-Off Prizes Remaining — Top Prizes Left Today"/>
+<meta property="og:description" content="How many top prizes are still unclaimed on every Tennessee scratch-off, recounted every morning from official Tennessee Lottery data. See which games still have their jackpots — and which are already gone."/>
+<meta property="og:url" content="https://scratchwolf.com/tennessee-scratch-offs/prizes-remaining/"/>
+<meta property="og:site_name" content="ScratchWolf"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="og:image" content="https://scratchwolf.com/assets/og-image.png"/>
+<meta name="twitter:image" content="https://scratchwolf.com/assets/og-image.png"/>
+<link rel="icon" href="https://scratchwolf.com/favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<!-- gstatic is where the font FILES come from; googleapis only serves the CSS that points at them.
+     Preconnecting to just the CSS host leaves a full DNS+TLS handshake on the critical path at the
+     moment the browser discovers the @font-face. The hand-authored landing page already had both;
+     the 3,465 generated pages had only the first. crossorigin is REQUIRED here — fonts are fetched
+     in CORS mode, and a preconnect without it opens a connection the font request cannot reuse. -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0F172A;--green:#0e9f6e;--paper:#faf9f6;--ink:#1c2434;--muted:#5b6472;--rule:#e4e1d8}
+*{box-sizing:border-box}body{margin:0;font-family:'Public Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--rule);padding:18px 0}
+header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-weight:800;font-size:19px;
+  display:inline-flex;align-items:center;gap:9px}
+header a svg{width:26px;height:26px;flex:0 0 26px}
+/* Site-wide nav. The category leaders all carry one and we had only a logo: a persistent bar puts
+   the hub links on all 3,465 pages instead of the homepage alone, which is the cheapest way to get
+   authority into pages that are otherwise reachable only from the sitemap. */
+header .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header nav{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header nav a{font-family:'Public Sans',system-ui,sans-serif;font-size:14px;font-weight:600;
+  color:var(--muted);letter-spacing:.01em}
+header nav a:hover{color:var(--navy)}
+header nav a.navcta{color:#fff;background:var(--navy);padding:7px 14px;border-radius:3px}
+header nav a.navcta:hover{color:#fff}
+/* Freshness, above the fold. It already existed in the FOOTER, which is below everything on a
+   3,400-row table — the one claim a visitor most wants before trusting a prize count was the last
+   thing they could see. datetime= carries the machine-readable form. */
+.fresh{display:inline-block;margin:0 0 4px;font-family:'Public Sans',system-ui,sans-serif;
+  font-size:13px;font-weight:600;color:#0b7a54;background:#e7f5ef;border-radius:99px;padding:5px 12px}
+.fresh::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:#0e9f6e;margin-right:7px;vertical-align:middle}
+/* Shape-based assets outperform every other kind of distinctive asset, and this mark appeared on
+   the hand-authored landing page ONLY — the 3,343 generated pages, which are the ones search
+   traffic actually lands on, carried a text wordmark and no shape at all. */
+.markline{display:flex;align-items:center;gap:10px;margin:34px 0 0}
+.markline svg{width:20px;height:20px;flex:0 0 20px;opacity:.9}
+.markline h2{margin:0}
+.gnum{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+footer .fmark{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+footer .fmark svg{width:20px;height:20px}
+footer .fmark b{font-family:Fraunces,serif;font-size:15px;color:var(--navy)}
+h1{font-size:38px;margin:32px 0 8px;letter-spacing:-.4px}
+.sub{color:var(--muted);margin:0 0 28px;font-size:17px}
+.lead{font-size:18px;line-height:1.6;margin:0 0 20px}
+.related{list-style:none;padding:0;margin:16px 0 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.related li{border:1px solid var(--rule);padding:10px 12px}
+.related .sub{margin:0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:18px 0 28px;font-size:15px}
+/* A 5-column table is ~575px wide; on a 430px phone it was pushing the PAGE BODY to scroll
+   horizontally (measured 599px of content in a 430px viewport). Wide content has to scroll inside
+   its own container — a body that scrolls sideways breaks every other element on the page too, and
+   these state pages are the ones search traffic lands on, overwhelmingly from phones. */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+.table-wrap>table{margin:0}
+.table-wrap>table th:first-child,.table-wrap>table td:first-child{position:sticky;left:0;background:var(--paper)}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td a{color:var(--navy);font-weight:600}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cta{display:block;margin:34px 0;padding:22px 24px;background:var(--navy);color:#fff;text-decoration:none;border-radius:2px}
+.cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
+.cta span{color:#cbd5e1;font-size:15px}
+/* Above-the-fold bar. Compact on purpose: these pages must RANK, so the thing a visitor searched
+   for has to stay visible. It orients someone who landed here from Google and gives them the one
+   next step, without becoming an interstitial that buries the content. min-height 44px is the
+   documented minimum tap target. */
+.appbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  margin:18px 0 26px;padding:14px 18px;background:#f1f5f9;border-left:3px solid var(--navy);border-radius:2px}
+.appbar p{font-size:14.5px;color:#334155;margin:0;flex:1 1 260px;line-height:1.45}
+.appbar a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--navy);
+  color:#fff;text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;white-space:nowrap}
+.appbar a:hover{background:#1e293b}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:24px 0 36px;padding:0;list-style:none}
+.grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:#fff}
+.grid a:hover{border-color:var(--navy)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0}
+.facts div{background:#fff;padding:16px}
+.facts dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.facts dd{margin:6px 0 0;font-size:22px;font-family:Fraunces,serif;color:var(--navy)}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+footer p{margin:0 0 10px}
+footer .legal{font-size:12px;line-height:1.6}
+footer .help{font-weight:700;color:var(--ink)}
+.crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
+</style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which Tennessee scratch-off has the most top prizes left?","acceptedAnswer":{"@type":"Answer","text":"$100 Frenzy currently has the most top prizes unclaimed of any Tennessee scratch-off — 1664 of its original 1793. Across every Tennessee game we track there are 2,526 top prizes still unclaimed."}},{"@type":"Question","name":"Does more prizes remaining mean a better ticket?","acceptedAnswer":{"@type":"Answer","text":"Not on its own. A brand-new game has every prize left and has also sold almost no tickets, so the share still unclaimed matters more than the raw count — which is why this table shows both. What actually moves the value is how many prizes remain relative to how many tickets are left in circulation."}},{"@type":"Question","name":"How current are these Tennessee prize counts?","acceptedAnswer":{"@type":"Answer","text":"They are re-read every morning from the Tennessee Lottery's own published prize tables, so they reflect the most recent figures the state has released. Lotteries typically update once a day, so a prize claimed this afternoon may not appear until tomorrow."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ScratchWolf","item":"https://scratchwolf.com/"},{"@type":"ListItem","position":2,"name":"Tennessee","item":"https://scratchwolf.com/tennessee-scratch-offs/"},{"@type":"ListItem","position":3,"name":"Prizes remaining"}]}]</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-755E8P2420"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']});
+gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+gtag('js',new Date());gtag('config','G-755E8P2420');
+</script>
+</head>
+<body>
+<header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a>
+<nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a class="navcta" href="https://scratchwolf.com/app">Open app</a></nav></div></header>
+<main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-09-06">September 6, 2026</time></p>
+
+<p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</a> › Prizes remaining</p>
+<h1>Tennessee Scratch-Off Prizes Remaining</h1>
+<p class="sub">Top prizes still unclaimed on every Tennessee Lottery scratch-off, recounted every
+morning from the state's own published figures.</p>
+<p class="lead">Across 23 Tennessee scratch-offs we track, 2,526 top prizes are still unclaimed.</p>
+<div class="appbar">
+  <p>This page shows what is left. The app ranks the same Tennessee games by what that actually makes them worth.</p>
+  <a href="https://scratchwolf.com/app/browse?state=TN">Open Tennessee →</a>
+</div>
+
+<h2>Why this matters more than the printed odds</h2>
+<p>The overall odds on a ticket never change &mdash; they are fixed the day the game goes to print.
+What changes every day is how much of the prize pool is still there. Two tickets with identical
+printed odds can be worth very different amounts depending on whether the jackpots have already
+been claimed, and a state lottery is under no obligation to stop selling a game once they have.</p>
+
+<h2>Tennessee games by top prizes remaining</h2>
+<table>
+  <thead><tr><th>#</th><th>Game</th><th>Price</th><th>Top prize</th><th>Left</th><th>Share left</th></tr></thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/100-frenzy-1357/">$100 Frenzy</a> <span class="gnum">#1357</span></td>
+  <td>$2</td>
+  <td>$100</td>
+  <td>1664 of 1793</td>
+  <td>93%</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/50-100-or-500-1363/">$50, $100 Or $500!</a> <span class="gnum">#1363</span></td>
+  <td>$10</td>
+  <td>$500</td>
+  <td>484 of 691</td>
+  <td>70%</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/25-50-250-cash-out-1352/">$25, $50 &amp; $250 Cash Out</a> <span class="gnum">#1352</span></td>
+  <td>$5</td>
+  <td>$250</td>
+  <td>206 of 339</td>
+  <td>61%</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/100-250-and-500-1354/">$100, $250 AND $500!</a> <span class="gnum">#1354</span></td>
+  <td>$20</td>
+  <td>$500</td>
+  <td>82 of 92</td>
+  <td>89%</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/jumbo-bucks-1825/">Jumbo Bucks</a> <span class="gnum">#1825</span></td>
+  <td>$2</td>
+  <td>$50,000</td>
+  <td>21 of 27</td>
+  <td>78%</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/lady-jumbo-bucks-1853/">Lady Jumbo Bucks</a> <span class="gnum">#1853</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>16 of 22</td>
+  <td>73%</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/jumbo-bucks-seasons-1501/">Jumbo Bucks Seasons</a> <span class="gnum">#1501</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>12 of 13</td>
+  <td>92%</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/jumbo-bucks-seasons-1401/">Jumbo Bucks Seasons</a> <span class="gnum">#1401</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>10 of 11</td>
+  <td>91%</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/jumbo-bucks-bingo-854/">Jumbo Bucks Bingo</a> <span class="gnum">#854</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>4 of 4</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/treasure-hunt-1380/">Treasure Hunt</a> <span class="gnum">#1380</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>3 of 3</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>11</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/20x-1366/">20X</a> <span class="gnum">#1366</span></td>
+  <td>$2</td>
+  <td>$50,000</td>
+  <td>3 of 3</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>12</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/lucky-777-1277/">Lucky 777</a> <span class="gnum">#1277</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>3 of 3</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>13</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/500-000-bonus-scratch-1306/">$500,000 Bonus Scratch</a> <span class="gnum">#1306</span></td>
+  <td>$10</td>
+  <td>$500,000</td>
+  <td>2 of 2</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>14</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/30x-cashword-1367/">30X Cashword</a> <span class="gnum">#1367</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>2 of 2</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>15</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/more-money-1351/">More Money</a> <span class="gnum">#1351</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>2 of 2</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>16</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/cash-flow-1262/">Cash Flow</a> <span class="gnum">#1262</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>2 of 2</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>17</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/cash-notes-1379/">Cash Notes</a> <span class="gnum">#1379</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>2 of 3</td>
+  <td>67%</td>
+  </tr>
+  <tr>
+  <td>18</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/stacks-of-green-1371/">Stacks Of Green</a> <span class="gnum">#1371</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>2 of 3</td>
+  <td>67%</td>
+  </tr>
+  <tr>
+  <td>19</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/hot-chicken-1375/">HOT Chicken</a> <span class="gnum">#1375</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>2 of 3</td>
+  <td>67%</td>
+  </tr>
+  <tr>
+  <td>20</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/50-000-bonus-scratch-1304/">$50,000 Bonus Scratch</a> <span class="gnum">#1304</span></td>
+  <td>$2</td>
+  <td>$50,000</td>
+  <td>1 of 1</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>21</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/double-deuces-1328/">Double Deuces</a> <span class="gnum">#1328</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>1 of 1</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>22</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/20-000-payout-1333/">$20,000 Payout</a> <span class="gnum">#1333</span></td>
+  <td>$2</td>
+  <td>$20,000</td>
+  <td>1 of 1</td>
+  <td>100%</td>
+  </tr>
+  <tr>
+  <td>23</td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/jackpot-slots-1254/">Jackpot Slots</a> <span class="gnum">#1254</span></td>
+  <td>$3</td>
+  <td>$75,000</td>
+  <td>1 of 2</td>
+  <td>50%</td>
+  </tr>
+  </tbody>
+</table>
+<p class="note">Showing 23 of 23 Tennessee games that publish top-prize
+counts. "Share left" is what remains of the game's original top prizes.</p>
+
+<h2>Tennessee prizes-remaining questions</h2>
+<h3>Which Tennessee scratch-off has the most top prizes left?</h3>
+<p>$100 Frenzy currently has the most top prizes unclaimed of any Tennessee scratch-off — 1664 of its original 1793. Across every Tennessee game we track there are 2,526 top prizes still unclaimed.</p>
+<h3>Does more prizes remaining mean a better ticket?</h3>
+<p>Not on its own. A brand-new game has every prize left and has also sold almost no tickets, so the share still unclaimed matters more than the raw count — which is why this table shows both. What actually moves the value is how many prizes remain relative to how many tickets are left in circulation.</p>
+<h3>How current are these Tennessee prize counts?</h3>
+<p>They are re-read every morning from the Tennessee Lottery's own published prize tables, so they reflect the most recent figures the state has released. Lotteries typically update once a day, so a prize claimed this afternoon may not appear until tomorrow.</p>
+
+<p><a href="https://scratchwolf.com/tennessee-scratch-offs/best-odds/">Tennessee scratch-offs ranked by overall odds &rarr;</a><br>
+<a href="https://scratchwolf.com/tennessee-scratch-offs/">&larr; All Tennessee scratch-offs</a></p></main>
+<footer><div class="wrap">
+<div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
+<p>Prize counts last recounted <time datetime="2026-09-06">September 6, 2026</time> from official state
+lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
+<p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
+collected from official public sources and may be delayed; all lottery games have a negative
+expected return over time and results are never guaranteed. Nothing here is a prediction or a
+promise of winning. For adults 18+ (19/21 where required).</p>
+<p class="legal help">If gambling is causing you harm, call the National Problem Gambling Helpline
+at <a href="tel:1-800-522-4700">1-800-522-4700</a> (1-800-GAMBLER) — free, confidential, 24/7.</p>
+<p class="legal"><a href="https://scratchwolf.com/about/">About</a> · <a href="https://scratchwolf.com/privacy.html">Privacy</a> · <a href="https://scratchwolf.com/terms.html">Terms</a></p>
+</div></footer>
+</body>
+</html>

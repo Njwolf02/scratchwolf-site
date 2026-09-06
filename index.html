@@ -52,6 +52,17 @@
     .mark svg { width: 30px; height: 30px; }
     .mark b { font-family: 'Fraunces', serif; font-weight: 800; font-size: 19px; color: var(--navy); letter-spacing: .2px; }
     nav .right { font-size: 14px; color: var(--muted); }
+    /* Site-wide nav links, matching the generated pages. The landing page previously carried only
+       the logo and a location chip, so the two page types disagreed about what the site's
+       navigation IS — and the highest-authority page was the one with no links out. */
+    .fresh { display:inline-block; margin:0 0 14px; font-size:13px; font-weight:600;
+      color:#0b7a54; background:#e7f5ef; border-radius:99px; padding:5px 12px; }
+    .fresh::before { content:''; display:inline-block; width:7px; height:7px; border-radius:50%;
+      background:#0e9f6e; margin-right:7px; vertical-align:middle; }
+    nav .navlinks { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
+    nav .navlinks a { font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; }
+    nav .navlinks a:hover { color: var(--navy); }
+    @media (max-width: 640px) { nav .navlinks { display: none; } nav .right { margin-left: auto; } }
     .hero { padding: 52px 0 26px; }
     .hero .wrap { display: flex; gap: 56px; align-items: center; flex-wrap: wrap; }
     .hero .copy { flex: 1 1 420px; }
@@ -154,6 +165,11 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
         <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>
         <b>ScratchWolf</b>
       </a>
+      <span class="navlinks">
+        <a href="https://scratchwolf.com/best-odds/">Best odds</a>
+        <a href="#states">States</a>
+        <a href="https://scratchwolf.com/about/">How it works</a>
+      </span>
       <span class="right">Louisville, KY</span>
     </div>
   </nav>
@@ -164,6 +180,7 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
         <div class="kicker">Scratch-off odds &amp; analysis</div>
         <h1>The big prize might already be gone. We check.</h1>
         <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each morning. That covers 3,000 and some games across 44 states, each one given a Buy Score — and the best of them in your state each morning is your <b>Wolf Pick</b>.</p>
+        <p class="fresh">Prize counts checked <time datetime="2026-09-06">September 6, 2026</time></p>
         <a class="badge badge-cta" href="https://scratchwolf.com/app">Open ScratchWolf &rarr;</a>
         <span class="badge-note">Free in your browser &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
       </div>
@@ -188,7 +205,7 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
     </div>
   </section>
 
-  <section class="states-section">
+  <section class="states-section" id="states">
     <div class="wrap">
       <h2>Every state we track</h2>
       <p>Odds and remaining prizes for every active scratch-off, straight from each state lottery's own published data.</p>
