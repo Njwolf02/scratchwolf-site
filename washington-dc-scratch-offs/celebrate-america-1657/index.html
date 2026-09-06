@@ -16,6 +16,12 @@
 <meta name="twitter:image" content="https://scratchwolf.com/assets/og-image.png"/>
 <link rel="icon" href="https://scratchwolf.com/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<!-- gstatic is where the font FILES come from; googleapis only serves the CSS that points at them.
+     Preconnecting to just the CSS host leaves a full DNS+TLS handshake on the critical path at the
+     moment the browser discovers the @font-face. The hand-authored landing page already had both;
+     the 3,465 generated pages had only the first. crossorigin is REQUIRED here — fonts are fetched
+     in CORS mode, and a preconnect without it opens a connection the font request cannot reuse. -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root{--navy:#0F172A;--green:#0e9f6e;--paper:#faf9f6;--ink:#1c2434;--muted:#5b6472;--rule:#e4e1d8}
