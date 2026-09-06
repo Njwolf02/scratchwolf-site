@@ -100,6 +100,31 @@
   <meta property="og:image" content="https://scratchwolf.com/assets/og-image.png" />
   <meta name="twitter:image" content="https://scratchwolf.com/assets/og-image.png" />
 
+  <!--
+    Organization + WebSite, the two entity-level types Google reads from a homepage. This page had
+    NO structured data at all until 2026-09-06 while every generated page carried some — the
+    homepage is the highest-authority URL on the site and the one Google uses to understand what
+    the site IS, so it was the worst page to leave bare.
+
+    WebSite carries the site name (which is what lets Google show "ScratchWolf" rather than the bare
+    domain in results) and a SearchAction pointing at the app's browse route, which is the real
+    search surface. It is a genuine endpoint, not a decorative one.
+  -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization",
+   "name":"ScratchWolf","url":"https://scratchwolf.com/",
+   "logo":"https://scratchwolf.com/assets/og-image.png",
+   "description":"ScratchWolf recounts the remaining prizes on every scratch-off game in 44 US states each morning.",
+   "sameAs":[]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite",
+   "name":"ScratchWolf","url":"https://scratchwolf.com/",
+   "potentialAction":{"@type":"SearchAction",
+     "target":{"@type":"EntryPoint","urlTemplate":"https://scratchwolf.com/app/browse?q={search_term_string}"},
+     "query-input":"required name=search_term_string"}}
+  </script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-755E8P2420"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
