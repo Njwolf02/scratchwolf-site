@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ScratchWolf · Scratch-Off Odds &amp; Analysis</title>
-  <meta name="description" content="ScratchWolf recounts the remaining prizes on every scratch-off game in 44 states each morning, so you know which tickets are worth buying before you spend." />
+  <meta name="description" content="Updated daily. ScratchWolf recounts the prizes remaining on every scratch-off in all 44 states that sell them — every one there is — so you know which tickets are worth buying before you spend." />
   <!-- Returning-visitor redirect.
        Someone who has already used the app should not be shown the pitch again and made to click
        through it — that is the one genuinely bad step in the funnel, and it hits the most engaged
@@ -55,6 +55,13 @@
     /* Site-wide nav links, matching the generated pages. The landing page previously carried only
        the logo and a location chip, so the two page types disagreed about what the site's
        navigation IS — and the highest-authority page was the one with no links out. */
+    .proof { background:#0F172A; color:#e8edf4; padding:44px 0; }
+    .proof h2 { color:#fff; margin:0 0 22px; }
+    .proofgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:22px; }
+    .proofgrid div { display:flex; flex-direction:column; gap:5px; }
+    .proofgrid b { font-family:Fraunces,Georgia,serif; font-size:27px; color:#34d399; line-height:1.1; }
+    .proofgrid span { font-size:14px; color:#c3cede; line-height:1.45; }
+    .proofnote { margin:24px 0 0; font-size:14px; color:#c3cede; max-width:64ch; }
     .fresh { display:inline-block; margin:0 0 14px; font-size:13px; font-weight:600;
       color:#0b7a54; background:#e7f5ef; border-radius:99px; padding:5px 12px; }
     .fresh::before { content:''; display:inline-block; width:7px; height:7px; border-radius:50%;
@@ -103,7 +110,7 @@
   <link rel="canonical" href="https://scratchwolf.com/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="ScratchWolf · Scratch-Off Odds & Analysis"/>
-  <meta property="og:description" content="ScratchWolf recounts the remaining prizes on every scratch-off game in 44 states each morning, so you know which tickets are worth buying before you spend."/>
+  <meta property="og:description" content="Updated daily. ScratchWolf recounts the prizes remaining on every scratch-off in all 44 states that sell them — every one there is — so you know which tickets are worth buying before you spend."/>
   <meta property="og:url" content="https://scratchwolf.com/"/>
   <meta property="og:site_name" content="ScratchWolf"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -179,8 +186,10 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
       <div class="copy">
         <div class="kicker">Scratch-off odds &amp; analysis</div>
         <h1>The big prize might already be gone. We check.</h1>
-        <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each morning. That covers 3,000 and some games across 44 states, each one given a Buy Score — and the best of them in your state each morning is your <b>Wolf Pick</b>.</p>
-        <p class="fresh">Prize counts checked <time datetime="2026-09-06">September 6, 2026</time></p>
+        <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each
+        morning &mdash; all 3,000-odd games in <b>all 44 states that sell them</b>, which is every one there
+        is. Each game gets a Buy Score, and the best in your state each morning is your <b>Wolf Pick</b>.</p>
+        <p class="fresh">Prize counts checked <time datetime="2026-09-07">September 6, 2026</time></p>
         <a class="badge badge-cta" href="https://scratchwolf.com/app">Open ScratchWolf &rarr;</a>
         <span class="badge-note">Free in your browser &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
       </div>
@@ -202,6 +211,21 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
         <div class="row"><span class="n">04</span><div><h3>Alerts when things change</h3><p>A top prize gets claimed, a game starts selling out, a fresh game launches with a full pool. You'll hear about it the same morning we do — including when a game's <b>Wolf Factor</b> crosses 1.5x, meaning its jackpots are outlasting its ticket supply.</p></div></div>
         <div class="row"><span class="n">05</span><div><h3>AI Watch, and what it actually does</h3><p>A model estimates how likely each game is to lose a top prize in the next fortnight, and flags the ones closest to it. It is scored every night on data it has never seen — <b>0.92 AUC</b> on 187,000 held-out observations — and it covers <b>all 44 states</b>, including the ones that publish too little to compute a ticket's value at all. It tells you which games to act on before the prize is gone, or skip. It does not predict a winning ticket, and nothing can.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap">
+      <h2>Complete coverage, recounted every morning</h2>
+      <div class="proofgrid">
+        <div><b>44 of 44</b><span>every US jurisdiction that sells scratch-offs</span></div>
+        <div><b>3,000+</b><span>active games tracked, not a sample</span></div>
+        <div><b>Every morning</b><span>re-read from each lottery&rsquo;s own published tables</span></div>
+        <div><b>Audited daily</b><span>every state checked for stale or missing data</span></div>
+      </div>
+      <p class="proofnote">Five states run no lottery at all, and North Dakota and Wyoming prohibit
+      scratch-offs by law. That leaves 44 &mdash; and we cover all of them. Most comparable sites
+      cover 25 to 41.</p>
     </div>
   </section>
 
