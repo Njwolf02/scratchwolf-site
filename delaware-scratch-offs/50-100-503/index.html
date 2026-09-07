@@ -14,7 +14,13 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta property="og:image" content="https://scratchwolf.com/assets/og-image.png"/>
 <meta name="twitter:image" content="https://scratchwolf.com/assets/og-image.png"/>
+<!-- Google showed a generic GLOBE for scratchwolf.com because /favicon.ico was a 404 and the site
+     served only an SVG. Google's favicon crawler looks for that path by default and wants a raster
+     square sized in multiples of 48px — the one thing an SVG cannot satisfy. Order matters: .ico
+     first for crawlers and old browsers, SVG second so modern browsers prefer the sharp one. -->
+<link rel="icon" href="https://scratchwolf.com/favicon.ico" sizes="32x32"/>
 <link rel="icon" href="https://scratchwolf.com/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="https://scratchwolf.com/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <!-- gstatic is where the font FILES come from; googleapis only serves the CSS that points at them.
      Preconnecting to just the CSS host leaves a full DNS+TLS handshake on the critical path at the
