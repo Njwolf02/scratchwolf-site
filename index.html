@@ -42,7 +42,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy:#0F172A; --green:#0e9f6e; --paper:#faf9f6; --ink:#1c2434; --muted:#5b6472; --rule:#e4e1d8; }
+    :root { color-scheme: light; --navy:#0F172A; --brand:#0F172A; --on-brand:#fff; --green:#0e9f6e;
+      --paper:#faf9f6; --ink:#1c2434; --muted:#5b6472; --rule:#e4e1d8;
+      --fresh-fg:#0b7a54; --fresh-bg:#e7f5ef; --fine:#8a8f99; }
+    /* Dark support. The site had none — a visitor whose OS is dark got a white marketing page and a
+       dark product. Only tokens are redefined, so the light rendering is unchanged.
+       --navy is a TEXT role and inverts; --brand is a FILL role and stays dark so the white text on
+       the CTA and the dark panels keeps working. Contrast for every pair was computed, not eyeballed. */
+    @media (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; --navy:#eef1f6; --brand:#1b2740; --on-brand:#fff; --green:#34d399;
+        --paper:#0f1115; --ink:#e6e8ec; --muted:#a0a8b4; --rule:#2a2f3a;
+        --fresh-fg:#34d399; --fresh-bg:#0f2a22; --fine:#9aa0ab; }
+    }
     body { font-family: 'Public Sans', -apple-system, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
     h1,h2,h3 { font-family: 'Fraunces', Georgia, serif; }
     .wrap { max-width: 1020px; margin: 0 auto; padding: 0 28px; }
@@ -55,7 +66,7 @@
     /* Site-wide nav links, matching the generated pages. The landing page previously carried only
        the logo and a location chip, so the two page types disagreed about what the site's
        navigation IS — and the highest-authority page was the one with no links out. */
-    .proof { background:#0F172A; color:#e8edf4; padding:44px 0; }
+    .proof { background:var(--brand); color:#e8edf4; padding:44px 0; }
     .proof h2 { color:#fff; margin:0 0 22px; }
     .proofgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:22px; }
     .proofgrid div { display:flex; flex-direction:column; gap:5px; }
@@ -63,9 +74,9 @@
     .proofgrid span { font-size:14px; color:#c3cede; line-height:1.45; }
     .proofnote { margin:24px 0 0; font-size:14px; color:#c3cede; max-width:64ch; }
     .fresh { display:inline-block; margin:0 0 14px; font-size:13px; font-weight:600;
-      color:#0b7a54; background:#e7f5ef; border-radius:99px; padding:5px 12px; }
+      color:var(--fresh-fg); background:var(--fresh-bg); border-radius:99px; padding:5px 12px; }
     .fresh::before { content:''; display:inline-block; width:7px; height:7px; border-radius:50%;
-      background:#0e9f6e; margin-right:7px; vertical-align:middle; }
+      background:var(--green); margin-right:7px; vertical-align:middle; }
     nav .navlinks { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
     nav .navlinks a { font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; }
     nav .navlinks a:hover { color: var(--navy); }
@@ -77,7 +88,7 @@
     .hero h1 { font-size: 52px; line-height: 1.04; font-weight: 800; color: var(--navy); margin-top: 14px; letter-spacing: -0.5px; }
     .hero .sub { font-size: 18px; color: var(--muted); margin-top: 20px; max-width: 480px; }
     .badge { display: inline-block; margin-top: 28px; border: 1.5px solid var(--navy); color: var(--navy); font-weight: 700; font-size: 14px; padding: 11px 20px; }
-    .badge-cta { background: var(--navy); color: #fff; text-decoration: none; }
+    .badge-cta { background: var(--brand); color: var(--on-brand); text-decoration: none; }
     .badge-cta:hover { background: var(--green); border-color: var(--green); }
     .badge-note { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); }
     .badge-note a { color: var(--muted); }
@@ -98,11 +109,11 @@
     .row .n { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 800; color: var(--green); padding-top: 3px; min-width: 30px; }
     .row h3 { font-size: 18px; color: var(--navy); }
     .row p { font-size: 15px; color: var(--muted); margin-top: 4px; max-width: 560px; }
-    .edu { background: var(--navy); color: #e8edf5; padding: 46px 0; }
+    .edu { background: var(--brand); color: #e8edf5; padding: 46px 0; }
     .edu h2 { font-size: 26px; color: #fff; }
     .edu p { margin-top: 12px; max-width: 640px; color: #b9c3d4; font-size: 15.5px; }
     .edu em { color: var(--green); font-style: normal; font-weight: 700; }
-    .fine { padding: 34px 0 8px; font-size: 12.5px; color: #8a8f99; max-width: 700px; }
+    .fine { padding: 34px 0 8px; font-size: 12.5px; color: var(--fine); max-width: 700px; }
     footer { padding: 26px 0 44px; font-size: 13.5px; color: var(--muted); }
     footer a { color: var(--navy); }
     @media (max-width: 640px) { .hero h1 { font-size: 36px; } .phone { flex-basis: 230px; } }
@@ -172,7 +183,7 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
   <nav>
     <div class="wrap">
       <a class="mark" href="/">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>
         <b>ScratchWolf</b>
       </a>
       <span class="navlinks">
@@ -192,7 +203,7 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
         <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each
         morning &mdash; all 3,000-odd games in <b>all 44 states that sell them</b>, which is every one there
         is. Each game gets a Buy Score, and the best in your state each morning is your <b>Wolf Pick</b>.</p>
-        <p class="fresh">Prize counts checked <time datetime="2026-09-08">September 8, 2026</time></p>
+        <p class="fresh">Prize counts checked <time datetime="2026-09-09">September 8, 2026</time></p>
         <a class="badge badge-cta" href="https://scratchwolf.com/app">Open ScratchWolf &rarr;</a>
         <span class="badge-note">Free in your browser &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
       </div>

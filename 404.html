@@ -6,6 +6,10 @@
   <title>ScratchWolf — Get the App</title>
   <meta name="description" content="This content lives in the ScratchWolf app — daily scratch-off odds and analysis for your state." />
   <style>
+    /* Deliberately a single dark look — it already paints its own background and colours
+       explicitly, so it needs no prefers-color-scheme block, only to DECLARE the scheme so the
+       browser paints scrollbars and any form control to match. */
+    :root { color-scheme: dark; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0F172A; color: #fff; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
     .card { max-width: 460px; }

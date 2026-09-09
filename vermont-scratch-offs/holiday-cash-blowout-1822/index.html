@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)"/>
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)"/>
 <title>Holiday Cash Blowout (Vermont) — Odds, Top Prize &amp; Prizes Remaining</title>
 <meta name="description" content="Holiday Cash Blowout is a $10 Vermont Lottery scratch-off with a $20,000 top prize and overall odds of 1 in 3.77. See how many top prizes are still unclaimed."/>
 <link rel="canonical" href="https://scratchwolf.com/vermont-scratch-offs/holiday-cash-blowout-1822/"/>
@@ -30,7 +32,58 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#0F172A;--green:#0e9f6e;--paper:#faf9f6;--ink:#1c2434;--muted:#5b6472;--rule:#e4e1d8}
+/* Light is the base and its values are UNCHANGED — the dark block below only redefines tokens, so
+   the light rendering of all 3,400+ pages is byte-identical to before this was added.
+
+   🚨 --navy AND --brand ARE THE SAME COLOUR IN LIGHT AND MUST NOT BE MERGED. --navy is a TEXT role
+   (headings, links, table links) and INVERTS in dark; --brand is a FILL role (CTA, nav button,
+   appbar button) and stays dark so white text keeps working on it. Collapsing them gives either
+   navy-on-navy fills or invisible headings — exactly the fill-vs-text trap the app hit in four
+   separate places, where primary (text) and brand (background) had to be split for this reason. */
+:root{
+  color-scheme:light;
+  --navy:#0F172A;        /* TEXT: headings, links */
+  --brand:#0F172A;       /* FILL: buttons, CTA panel */
+  --brand-hover:#1e293b;
+  --on-brand:#fff;       /* text ON --brand — never a page-background colour */
+  --on-brand-dim:#cbd5e1;
+  --green:#0e9f6e;
+  --paper:#faf9f6;       /* page background */
+  --surface:#fff;        /* cards, table cells, grid tiles */
+  --surface-2:#f1f5f9;   /* the appbar */
+  --ink:#1c2434;
+  --muted:#5b6472;
+  --appbar-fg:#334155;
+  --rule:#e4e1d8;
+  --bar:#0F172A;         /* the appbar's left accent rule */
+  --fresh-fg:#0b7a54;
+  --fresh-bg:#e7f5ef;
+}
+/* The site had NO dark support at all — no prefers-color-scheme, no color-scheme, no theme-color —
+   while the app ships three theme modes. A visitor whose OS is dark got a full-white page from the
+   marketing site and a dark one from the product. Contrast ratios for every pair below were computed,
+   not eyeballed; all clear AA for text and 3:1 for the graphical marks. */
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --navy:#eef1f6;      /* the text role inverts */
+    --brand:#1b2740;     /* the fill role stays dark, lifted so it reads against --paper */
+    --brand-hover:#243252;
+    --on-brand:#fff;
+    --on-brand-dim:#c3cad6;
+    --green:#34d399;
+    --paper:#0f1115;
+    --surface:#171a20;
+    --surface-2:#181d26;
+    --ink:#e6e8ec;
+    --muted:#a0a8b4;
+    --appbar-fg:#c3cad6;
+    --rule:#2a2f3a;
+    --bar:#34d399;       /* a dark navy rule on a dark ground is invisible; the accent carries it */
+    --fresh-fg:#34d399;
+    --fresh-bg:#0f2a22;
+  }
+}
 *{box-sizing:border-box}body{margin:0;font-family:'Public Sans',-apple-system,BlinkMacSystemFont,sans-serif;
 color:var(--ink);background:var(--paper);line-height:1.65}
 h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
@@ -47,20 +100,20 @@ header nav{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:w
 header nav a{font-family:'Public Sans',system-ui,sans-serif;font-size:14px;font-weight:600;
   color:var(--muted);letter-spacing:.01em}
 header nav a:hover{color:var(--navy)}
-header nav a.navcta{color:#fff;background:var(--navy);padding:7px 14px;border-radius:3px}
-header nav a.navcta:hover{color:#fff}
+header nav a.navcta{color:var(--on-brand);background:var(--brand);padding:7px 14px;border-radius:3px}
+header nav a.navcta:hover{color:var(--on-brand)}
 /* Freshness, above the fold. It already existed in the FOOTER, which is below everything on a
    3,400-row table — the one claim a visitor most wants before trusting a prize count was the last
    thing they could see. datetime= carries the machine-readable form. */
 .pricetiers{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 30px}
 .pricetiers a{display:inline-flex;align-items:baseline;gap:6px;padding:9px 15px;border:1px solid var(--rule);
-  border-radius:3px;text-decoration:none;color:var(--navy);font-weight:700;font-size:15px;background:#fff}
+  border-radius:3px;text-decoration:none;color:var(--navy);font-weight:700;font-size:15px;background:var(--surface)}
 .pricetiers a:hover{border-color:var(--navy)}
 .pricetiers a span{font-weight:400;font-size:13px;color:var(--muted)}
 .fresh{display:inline-block;margin:0 0 4px;font-family:'Public Sans',system-ui,sans-serif;
-  font-size:13px;font-weight:600;color:#0b7a54;background:#e7f5ef;border-radius:99px;padding:5px 12px}
+  font-size:13px;font-weight:600;color:var(--fresh-fg);background:var(--fresh-bg);border-radius:99px;padding:5px 12px}
 .fresh::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
-  background:#0e9f6e;margin-right:7px;vertical-align:middle}
+  background:var(--green);margin-right:7px;vertical-align:middle}
 /* Shape-based assets outperform every other kind of distinctive asset, and this mark appeared on
    the hand-authored landing page ONLY — the 3,343 generated pages, which are the ones search
    traffic actually lands on, carried a text wordmark and no shape at all. */
@@ -89,24 +142,24 @@ th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--rule)}
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 td a{color:var(--navy);font-weight:600}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.cta{display:block;margin:34px 0;padding:22px 24px;background:var(--navy);color:#fff;text-decoration:none;border-radius:2px}
+.cta{display:block;margin:34px 0;padding:22px 24px;background:var(--brand);color:var(--on-brand);text-decoration:none;border-radius:2px}
 .cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
-.cta span{color:#cbd5e1;font-size:15px}
+.cta span{color:var(--on-brand-dim);font-size:15px}
 /* Above-the-fold bar. Compact on purpose: these pages must RANK, so the thing a visitor searched
    for has to stay visible. It orients someone who landed here from Google and gives them the one
    next step, without becoming an interstitial that buries the content. min-height 44px is the
    documented minimum tap target. */
 .appbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;
-  margin:18px 0 26px;padding:14px 18px;background:#f1f5f9;border-left:3px solid var(--navy);border-radius:2px}
-.appbar p{font-size:14.5px;color:#334155;margin:0;flex:1 1 260px;line-height:1.45}
-.appbar a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--navy);
-  color:#fff;text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;white-space:nowrap}
-.appbar a:hover{background:#1e293b}
+  margin:18px 0 26px;padding:14px 18px;background:var(--surface-2);border-left:3px solid var(--bar);border-radius:2px}
+.appbar p{font-size:14.5px;color:var(--appbar-fg);margin:0;flex:1 1 260px;line-height:1.45}
+.appbar a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--brand);
+  color:var(--on-brand);text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;white-space:nowrap}
+.appbar a:hover{background:var(--brand-hover)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:24px 0 36px;padding:0;list-style:none}
-.grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:#fff}
+.grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:var(--surface)}
 .grid a:hover{border-color:var(--navy)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0}
-.facts div{background:#fff;padding:16px}
+.facts div{background:var(--surface);padding:16px}
 .facts dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .facts dd{margin:6px 0 0;font-size:22px;font-family:Fraunces,serif;color:var(--navy)}
 footer{border-top:1px solid var(--rule);margin-top:48px;padding:26px 0 60px;color:var(--muted);font-size:13px}
@@ -126,9 +179,9 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
 </script>
 </head>
 <body>
-<header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a>
+<header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a>
 <nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a class="navcta" href="https://scratchwolf.com/app">Open app</a></nav></div></header>
-<main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-09-08">September 8, 2026</time></p>
+<main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-09-09">September 8, 2026</time></p>
 
 <p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</a> › Holiday Cash Blowout</p>
 <h1>Holiday Cash Blowout</h1>
@@ -175,8 +228,8 @@ gtag('js',new Date());gtag('config','G-755E8P2420');
 <p class="sub">Prize counts come from the Vermont Lottery (<a href="https://vtlottery.com/games/instant-tickets/holiday-cash-blowout" rel="nofollow noopener">official source</a>) and are recounted every morning.</p>
 <p><a href="https://scratchwolf.com/vermont-scratch-offs/">← All Vermont scratch-offs</a></p></main>
 <footer><div class="wrap">
-<div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#0F172A"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
-<p>Prize counts last recounted <time datetime="2026-09-08">September 8, 2026</time> from official state
+<div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
+<p>Prize counts last recounted <time datetime="2026-09-09">September 8, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative
