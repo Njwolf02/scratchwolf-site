@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /app
 
 # This dataset is recounted daily at real cost. Not free training data.
 User-agent: GPTBot
