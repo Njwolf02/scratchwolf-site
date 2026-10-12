@@ -30,6 +30,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']});
 gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
 gtag('js',new Date());gtag('config','G-755E8P2420');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga-event]');if(a)gtag('event',a.getAttribute('data-ga-event'),{link_url:a.href});});
 </script>
 </head>
 <body>
