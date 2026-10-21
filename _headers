@@ -1,0 +1,11 @@
+# Cloudflare Workers static assets — response headers by path.
+# HTML keeps the platform default (max-age=0, must-revalidate + ETag): prize data changes daily and a
+# revalidation is a cheap 304. Images and icons rarely change and are not content-hashed, so a day is
+# the safe ceiling — long enough to spare repeat visitors the requests, short enough that a
+# replaced image reaches everyone by tomorrow.
+/assets/*
+  Cache-Control: public, max-age=86400
+/favicon*
+  Cache-Control: public, max-age=86400
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400
