@@ -1,0 +1,5 @@
+# Cloudflare Workers static assets — permanent redirects, applied before any asset is served.
+# Privacy and terms moved to extensionless URLs on 2026-10-20. The .html addresses stay reachable
+# because app-store listings and installed app versions link to them.
+/privacy.html /privacy 301
+/terms.html /terms 301
