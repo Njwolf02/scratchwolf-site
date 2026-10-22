@@ -45,64 +45,78 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: July 2026</p>
+  <p class="updated">Last updated: October 22, 2026</p>
 
-  <p>ScratchWolf ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights. ScratchWolf does not require an account — you can use the app without ever telling us who you are.</p>
+  <p>ScratchWolf ("we", "our", or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights. You can use ScratchWolf without an account. An account is optional and only adds syncing across devices, email alerts, and Premium.</p>
 
   <h2>1. Information We Collect</h2>
   <ul>
-    <li><strong>Device push token</strong> — collected only when you enable notifications, used solely to send prize alerts relevant to your home state. Stored on our servers and never sold.</li>
-    <li><strong>Home state preference</strong> — stored locally on your device and used to filter the data shown in the app.</li>
-    <li><strong>Usage analytics</strong> — we use Google Firebase Analytics to understand which features are used (screens viewed, events tapped). This data is aggregated and not used to identify you.</li>
-    <li><strong>Crash and error reports</strong> — we use Sentry to receive crash reports when the app encounters an error (device model, operating system version, and the technical details of the error). These reports contain no name, email, or account information.</li>
-    <li><strong>Subscription status</strong> — if you subscribe to Premium, payment is handled entirely by Apple or Google. Our subscription provider (RevenueCat) assigns an anonymous identifier and tells us only whether a subscription is active. We never see your payment details.</li>
+    <li><strong>Account information (only if you create an account)</strong> — your email address, and whether it has been verified. You can sign in with a one-time email link or code, or with Google.</li>
+    <li><strong>Information from Google Sign-In</strong> — when you choose "Continue with Google", Google shares your email address, whether Google has verified it, and a Google account identifier. We store only the email address and the identifier. Google also includes your name and profile picture; we do not store them. We request no other Google permissions and have no access to your Google account, contacts, files, or other Google data.</li>
+    <li><strong>Account settings</strong> — if you are signed in, your home state, favorite games, alert preferences, budget and spending-limit settings, and display theme are saved to your account so they follow you between devices.</li>
+    <li><strong>Ticket log (optional)</strong> — if you choose to log tickets, we store the game, price, winnings, date, and any note you add, so you can track your results.</li>
+    <li><strong>Subscription information</strong> — if you subscribe to Premium on the web, payment is processed by Stripe. We receive a Stripe customer identifier, your subscription status, and its renewal date. We never see or store your card details. In the mobile apps, purchases are handled by Apple or Google through RevenueCat, which tells us only whether a subscription is active.</li>
+    <li><strong>Referrals</strong> — if you use or share a referral code, we record which account referred which.</li>
+    <li><strong>Device push token</strong> — collected only when you enable notifications, used solely to send alerts relevant to your home state.</li>
+    <li><strong>Approximate state</strong> — on the website we may suggest your state from the region of your internet connection, as reported by our network provider. We do not store it, and we never receive your precise location.</li>
+    <li><strong>Usage analytics</strong> — we use Google Analytics (website) and Google Firebase Analytics (mobile app) to understand which features are used, such as pages viewed and buttons tapped. This is not used to identify you.</li>
+    <li><strong>Crash and error reports</strong> — we use Sentry to receive technical reports when something breaks (device or browser type, operating system version, and the error details).</li>
     <li><strong>Advertising data</strong> — see Section 4.</li>
   </ul>
 
   <h2>2. Information We Do Not Collect</h2>
   <ul>
-    <li>Your name, email address, or account credentials — the app has no accounts</li>
-    <li>Your precise GPS location (we request location only to auto-detect your state during onboarding; the result is stored locally and raw coordinates are never sent to our servers)</li>
-    <li>Your lottery purchase history or spending habits</li>
+    <li>Passwords — ScratchWolf has no passwords</li>
+    <li>Your precise GPS location (the mobile app can use your location once to detect your state; the result stays on your device and raw coordinates are never sent to our servers)</li>
+    <li>Your payment card details</li>
+    <li>Any Google data beyond the sign-in information described above</li>
   </ul>
 
   <h2>3. How We Use Information</h2>
   <ul>
+    <li>To sign you in and keep your settings in sync</li>
+    <li>To send sign-in emails and, if you leave them on, alert emails about games in your state</li>
     <li>To send push notifications about prize changes in your state (only if you opt in)</li>
-    <li>To understand which features are useful and improve the app</li>
-    <li>To find and fix crashes and errors</li>
-    <li>To provide Premium features to active subscribers</li>
+    <li>To provide Premium features to subscribers and manage billing</li>
+    <li>To understand which features are useful, and to find and fix errors</li>
   </ul>
+  <p>We do not sell your personal information, and we do not use your account information or your Google Sign-In information for advertising.</p>
 
-  <h2>4. Advertising</h2>
-  <p>The free version of ScratchWolf shows ads served by Google AdMob. Premium subscribers see no ads.</p>
+  <h2>4. Google User Data</h2>
+  <p>ScratchWolf's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We use the email address and account identifier from Google Sign-In only to create and sign in to your ScratchWolf account. We do not transfer this information to anyone, except as needed to run the service (such as sending you email through our email provider), to comply with law, or as part of a merger or acquisition. We do not use it for advertising, and no person reads it except where you ask us to, for security, or to comply with law.</p>
+  <p>You can remove ScratchWolf's access at any time from your Google Account at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. That stops future Google sign-ins; to delete the account itself, see Section 7.</p>
+
+  <h2>5. Advertising</h2>
+  <p>The free version of the ScratchWolf mobile app shows ads served by Google AdMob. Premium subscribers see no ads.</p>
   <ul>
-    <li><strong>Consent:</strong> where required by law (for example the EEA, UK, and certain U.S. states), we show a consent form before any ads are requested. You can change or withdraw your choices at any time in <em>Settings → Manage Ad Privacy</em>.</li>
+    <li><strong>Consent:</strong> where required by law (for example the EEA, UK, and certain U.S. states), we show a consent form before any ads are requested. You can change or withdraw your choices at any time in Settings → Manage Ad Privacy.</li>
     <li><strong>iOS App Tracking Transparency:</strong> on iOS we ask your permission before any cross-app tracking identifier is used. If you decline (or until you decide), ads are non-personalized.</li>
     <li><strong>What ad partners receive:</strong> Google may collect device identifiers and interaction data to serve and measure ads, as described in <a href="https://policies.google.com/technologies/partner-sites">Google's partner policy</a>.</li>
-    <li>We never share your state preference, favorites, or in-app activity with advertisers.</li>
+    <li>We never share your email, account settings, favorites, ticket log, or in-app activity with advertisers.</li>
   </ul>
 
-  <h2>5. Service Providers</h2>
-  <p>We share data only with the processors needed to run the app: Google Firebase (analytics), Google AdMob (advertising), Sentry (crash reporting), RevenueCat (subscription management), and Expo (push notification delivery). Each receives only the minimum described above and may not use it for their own purposes beyond providing the service.</p>
+  <h2>6. Service Providers</h2>
+  <p>We share data only with the providers needed to run ScratchWolf: Cloudflare (website hosting and network security), Stripe (web payments), Resend (sending email), Google Analytics and Google Firebase (analytics), Google AdMob (mobile advertising), Sentry (error reporting), RevenueCat (mobile subscriptions), and Expo (push notification delivery). Each receives only what it needs to provide its service and may not use it for its own purposes.</p>
 
-  <h2>6. Your Rights</h2>
+  <h2>7. Your Rights and Choices</h2>
   <ul>
-    <li>You may disable notifications at any time in the app or system settings — this deletes the need for, and future use of, your push token.</li>
-    <li>You may withdraw ad-consent choices in Settings → Manage Ad Privacy.</li>
-    <li>Depending on where you live (GDPR, CCPA/CPRA, and similar laws), you may have rights to access, correct, or delete personal information and to opt out of "sale" or "sharing" as those laws define it. Because the app has no accounts, the data we could link to you is minimal — but you can exercise any of these rights by emailing us.</li>
+    <li>Turn off alert emails or push notifications at any time in Settings.</li>
+    <li>Sign out at any time; your device keeps working without an account.</li>
+    <li><strong>Delete your account:</strong> email <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> from the address on your account. We will delete your account, settings, ticket log, and Google sign-in link within 30 days, and cancel any active subscription.</li>
+    <li>Withdraw ad-consent choices in Settings → Manage Ad Privacy.</li>
+    <li>Depending on where you live (GDPR, CCPA/CPRA, and similar laws), you may have rights to access, correct, or delete your personal information and to opt out of "sale" or "sharing" as those laws define it. We do not sell or share personal information in that sense. You can exercise any of these rights by emailing us.</li>
   </ul>
 
-  <h2>7. Children</h2>
+  <h2>8. Children</h2>
   <p>ScratchWolf is intended for adults 18 years or older (19+/21+ where local law requires) and is not directed at children. We do not knowingly collect information from anyone under 18.</p>
 
-  <h2>8. Data Retention &amp; Security</h2>
-  <p>Push tokens are kept only while notifications are enabled and are removed when they become invalid. Analytics and crash data are retained per our providers' standard retention periods. All server communication is encrypted in transit.</p>
+  <h2>9. Data Retention &amp; Security</h2>
+  <p>Account information is kept while your account exists and deleted when you ask us to delete it. Push tokens are kept only while notifications are enabled. Billing records may be kept longer where tax or accounting law requires. Analytics and error data are kept for our providers' standard retention periods. All connections to ScratchWolf are encrypted in transit, and sign-in sessions use secure, HTTP-only cookies.</p>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this policy as the app evolves. Material changes will be reflected on this page with an updated date.</p>
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this policy as ScratchWolf evolves. Material changes will be reflected on this page with an updated date.</p>
 
-  <h2>10. Contact</h2>
+  <h2>11. Contact</h2>
   <p>Questions or requests: <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a></p>
 </body>
 </html>
