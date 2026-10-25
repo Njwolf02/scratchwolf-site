@@ -47,7 +47,7 @@
     var body = document.createElement('span');
     body.textContent = homeState && homeState !== state
       ? 'Your daily email stays set to ' + homeState + ' — you can change it in Settings.'
-      : 'Your first ' + stateName + ' email arrives tomorrow morning. If it lands in Promotions, drag it to Primary so you see it.';
+      : 'Your first ' + stateName + ' email arrives tomorrow morning, and new accounts have Premium free for 14 days. If it lands in Promotions, drag it to Primary so you see it.';
     var link = document.createElement('a');
     link.href = app + '/?state=' + state.toLowerCase();
     link.textContent = 'See today’s ' + stateName + ' picks now →';
