@@ -1,4 +1,4 @@
-// Inline daily-email sign-up for the state and game pages (form.signup, built by build.mjs).
+// Inline daily-email sign-up for every state, price, best-odds, prizes-remaining and game page (form.signup, built by build.mjs).
 //
 // It replaces a link to the app's sign-in screen, which asked a visitor who had just said "email me"
 // to leave the page, find a box and start again. Same account flow as the app — request-link sends a
