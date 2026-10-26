@@ -23,15 +23,24 @@
        • ?stay=1 escapes it, so the marketing page stays reachable for anyone (including you)
          who wants to look at it.
        • Inline and FIRST in head so it runs before paint; a redirect after render is a visible
-         flash of the wrong page. -->
+         flash of the wrong page.
+       • Not when they came from another page on this site: clicking the logo on a state page is
+         asking for this page.
+       🚨 It tested ONLY `hasOnboarded`, which the WEB app never sets — onboarding is skipped on
+         web (app/_layout.tsx), so this redirected nobody (found 2026-10-26). `locationAutoDetectDone`
+         is set on every web visit (by the IP lookup, or by a ?state= link), so it is the web's
+         "has used the app" mark. -->
   <script>
     (function () {
       try {
         if (location.search.indexOf('stay=1') !== -1) return;
+        var ref = document.referrer;
+        if (ref && ref.indexOf(location.origin + '/') === 0 && ref.indexOf(location.origin + '/app') !== 0) return;
         var raw = localStorage.getItem('app-settings-storage');
         if (!raw) return;
         var s = JSON.parse(raw);
-        if (s && s.state && s.state.settings && s.state.settings.hasOnboarded === true) {
+        var st = s && s.state && s.state.settings;
+        if (st && (st.hasOnboarded === true || st.locationAutoDetectDone === true)) {
           location.replace('/app/');
         }
       } catch (e) { /* private mode, blocked storage, bad JSON — just show the page */ }
@@ -177,10 +186,10 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']});
 gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
 gtag('js',new Date());gtag('config','G-755E8P2420');
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga-event]');if(a)gtag('event',a.getAttribute('data-ga-event'),{link_url:a.href});});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga-event]');if(!a)return;var p={link_url:a.href,page_type:document.body.getAttribute('data-page-type')||'other'};for(var k in a.dataset)if(k.indexOf('ga')===0&&k!=='gaEvent')p[k.slice(2).replace(/^./,function(c){return c.toLowerCase();})]=a.dataset[k];gtag('event',a.getAttribute('data-ga-event'),p);});
 </script>
 </head>
-<body>
+<body data-page-type="home">
   <nav>
     <div class="wrap">
       <a class="mark" href="/">
@@ -205,7 +214,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         morning &mdash; all 3,000-odd games in <b>all 44 states that sell them</b>, which is every one there
         is. Each game gets a Buy Score, and the best in your state each morning is your <b>Wolf Pick</b>.</p>
         <p class="fresh">Prize counts checked <time datetime="2026-10-26">October 26, 2026</time></p>
-        <a class="badge badge-cta" href="https://scratchwolf.com/app">Open ScratchWolf &rarr;</a>
+        <a class="badge badge-cta" href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="home_hero">Open ScratchWolf &rarr;</a>
         <span class="badge-note">Free in your browser &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
       </div>
       <figure class="phone">

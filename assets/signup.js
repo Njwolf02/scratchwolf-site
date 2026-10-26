@@ -25,6 +25,9 @@
   var address = '';
 
   function track(name, params) { if (window.gtag) window.gtag('event', name, params || {}); }
+  // Every failure the visitor sees is also counted, by step and kind. Without it a broken sign-up
+  // (API down, email provider rejecting) looks exactly like nobody trying.
+  function failed(stepName, reason) { track('email_signup_error', { state: state, step: stepName, reason: reason }); }
   function say(text) { msg.textContent = text; }
   function call(method, path, body) {
     return fetch(api + path, {
@@ -51,6 +54,9 @@
     var link = document.createElement('a');
     link.href = app + '/?state=' + state.toLowerCase();
     link.textContent = 'See today’s ' + stateName + ' picks now →';
+    link.setAttribute('data-ga-event', 'app_cta');
+    link.setAttribute('data-ga-placement', 'signup_done');
+    link.setAttribute('data-ga-state', state);
     form.appendChild(title);
     form.appendChild(body);
     form.appendChild(link);
@@ -58,10 +64,10 @@
 
   function requestCode() {
     address = email.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address)) { say('Enter a valid email address.'); email.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address)) { say('Enter a valid email address.'); failed('email', 'invalid_email'); email.focus(); return; }
     busy(true, 'Sending…');
     call('POST', '/v1/auth/request-link', { email: address, state: state }).then(function (r) {
-      if (!r.ok) { say(r.data.message || 'Something went wrong. Please try again.'); return; }
+      if (!r.ok) { say(r.data.message || 'Something went wrong. Please try again.'); failed('email', 'api_' + (r.data.code || 'error')); return; }
       track('email_signup_submit', { state: state });
       step = 'code';
       email.readOnly = true;
@@ -71,24 +77,27 @@
       code.focus();
     }).catch(function () {
       say('Could not reach ScratchWolf. Check your connection and try again.');
+      failed('email', 'network');
     }).then(function () { busy(false); });
   }
 
   function confirmCode() {
     var digits = code.value.replace(/\D/g, '');
-    if (digits.length !== 6) { say('Enter the 6-digit code from the email.'); code.focus(); return; }
+    if (digits.length !== 6) { say('Enter the 6-digit code from the email.'); failed('code', 'invalid_code_format'); code.focus(); return; }
     busy(true, 'Checking…');
     call('POST', '/v1/auth/verify-code', { email: address, code: digits }).then(function (r) {
-      if (!r.ok) { say(r.data.message || 'That code did not work. Check it and try again.'); busy(false); return; }
+      if (!r.ok) { say(r.data.message || 'That code did not work. Check it and try again.'); failed('code', 'api_' + (r.data.code || 'error')); busy(false); return; }
       track('login', { method: 'site_email_code', state: state });
       // Only a NEW account (no home state yet) takes this page's state — never overwrite a choice.
       return call('GET', '/v1/me').then(function (me) {
         var home = me.ok ? me.data.favoriteState : null;
-        if (!home) return call('PUT', '/v1/me/settings', { favoriteState: state }).then(function () { return null; });
+        // No home state yet = a NEW account: GA4's recommended sign_up event, beside login.
+        if (!home) { track('sign_up', { method: 'site_email_code', state: state }); return call('PUT', '/v1/me/settings', { favoriteState: state }).then(function () { return null; }); }
         return home;
       }).catch(function () { return null; }).then(done);
     }).catch(function () {
       say('Could not reach ScratchWolf. Check your connection and try again.');
+      failed('code', 'network');
       busy(false);
     });
   }

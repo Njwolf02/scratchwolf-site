@@ -165,7 +165,7 @@ td a{color:var(--navy);font-weight:600}
   margin:18px 0 26px;padding:14px 18px;background:var(--surface-2);border-left:3px solid var(--bar);border-radius:2px}
 .appbar p{font-size:14.5px;color:var(--appbar-fg);margin:0;flex:1 1 260px;line-height:1.45}
 .appbar a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--brand);
-  color:var(--on-brand);text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;white-space:nowrap}
+  color:var(--on-brand);text-decoration:none;border-radius:2px;font-weight:700;font-size:15px;padding-block:8px}
 .appbar a:hover{background:var(--brand-hover)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin:24px 0 36px;padding:0;list-style:none}
 .grid a{display:block;padding:12px 14px;border:1px solid var(--rule);text-decoration:none;color:var(--navy);font-weight:600;background:var(--surface)}
@@ -188,12 +188,12 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO']});
 gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
 gtag('js',new Date());gtag('config','G-755E8P2420');
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga-event]');if(a)gtag('event',a.getAttribute('data-ga-event'),{link_url:a.href});});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ga-event]');if(!a)return;var p={link_url:a.href,page_type:document.body.getAttribute('data-page-type')||'other'};for(var k in a.dataset)if(k.indexOf('ga')===0&&k!=='gaEvent')p[k.slice(2).replace(/^./,function(c){return c.toLowerCase();})]=a.dataset[k];gtag('event',a.getAttribute('data-ga-event'),p);});
 </script>
 </head>
-<body>
+<body data-page-type="game">
 <header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a>
-<nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a class="navcta" href="https://scratchwolf.com/app">Open app</a></nav></div></header>
+<nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a class="navcta" href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="nav">Open app</a></nav></div></header>
 <main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-10-26">October 26, 2026</time></p>
 
 <p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</a> › 50X THE CASH</p>
@@ -202,7 +202,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <p class="lead">50X THE CASH is a $5 instant game from the Wisconsin Lottery, listed as game #2742. The state publishes overall odds of 1 in 3.8. None of its 3 top prizes are still unclaimed.</p>
 <div class="appbar">
   <p>These are the Wisconsin Lottery's own published numbers. The app scores this ticket against every other Wisconsin game and tracks how fast its prizes are going.</p>
-  <a href="https://scratchwolf.com/app/game/wi/2742">Score this game →</a>
+  <a href="https://scratchwolf.com/app/game/wi/2742" data-ga-event="app_cta" data-ga-placement="game_top" data-ga-state="WI">See this game’s Buy Score →</a>
 </div>
 <dl class="facts">
   <div><dt>Ticket price</dt><dd>$5</dd></div>
@@ -288,7 +288,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <p>A 50X THE CASH ticket costs $5 at Wisconsin Lottery retailers.</p>
 <h2>Other Wisconsin scratch-offs</h2>
 <ul class="related"><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/500-holiday-cash-2803/">$500 HOLIDAY CASH</a> <span class="sub">$5</span></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/500-in-a-flash-2731/">$500 IN A FLASH</a> <span class="sub">$5</span></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/double-triple-dollars-2776/">DOUBLE, TRIPLE DOLLARS</a> <span class="sub">$5</span></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/extend-your-cash-2807/">EXTEND YOUR CASH</a> <span class="sub">$5</span></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/frankenbucks-2794/">FRANKENBUCKS</a> <span class="sub">$5</span></li><li><a href="https://scratchwolf.com/wisconsin-scratch-offs/golden-goose-crossword-2697/">GOLDEN GOOSE CROSSWORD</a> <span class="sub">$5</span></li></ul>
-<a class="cta" href="https://scratchwolf.com/app/game/wi/2742">
+<a class="cta" href="https://scratchwolf.com/app/game/wi/2742" data-ga-event="app_cta" data-ga-placement="game_bottom" data-ga-state="WI">
   <b>Is 50X THE CASH worth buying right now?</b>
   <span>See its expected value, prize-depletion trend, our forecast of how likely its top prizes
   are to be claimed soon, and how it ranks against every other Wisconsin game — free.</span>
