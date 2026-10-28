@@ -1,0 +1,108 @@
+# ScratchWolf
+
+> Daily prize counts for every scratch-off lottery game in the 44 US states that sell them: how many top prizes are still unclaimed, the overall odds, the ticket price and every prize level remaining. Recounted every morning from each state lottery's own published data.
+
+ScratchWolf is an educational data site. It does not sell lottery tickets, take wagers or award prizes. Every game page links to the official state lottery page its numbers came from, and shows the date they were checked — cite that date, because counts change daily as prizes are claimed.
+
+Useful for questions like: "which scratch-offs still have top prizes left in Texas", "best odds scratch-off in Ohio", "is a $20 scratcher still worth buying", "how many jackpots are left on a game".
+
+## Start here
+
+- [Best overall odds in every state](https://scratchwolf.com/best-odds/): the scratch-off with the shortest published overall odds in each state
+- [How ScratchWolf works](https://scratchwolf.com/about/): where the data comes from, how often it is checked, and what overall odds do and do not tell you
+- [ScratchWolf app](https://scratchwolf.com/app): the full analysis, free in a browser
+
+## States
+
+- [Arizona scratch-offs](https://scratchwolf.com/arizona-scratch-offs/): every game on sale with top prizes remaining
+  - [Arizona best odds](https://scratchwolf.com/arizona-scratch-offs/best-odds/) · [Arizona prizes remaining](https://scratchwolf.com/arizona-scratch-offs/prizes-remaining/)
+- [Arkansas scratch-offs](https://scratchwolf.com/arkansas-scratch-offs/): every game on sale with top prizes remaining
+  - [Arkansas best odds](https://scratchwolf.com/arkansas-scratch-offs/best-odds/) · [Arkansas prizes remaining](https://scratchwolf.com/arkansas-scratch-offs/prizes-remaining/)
+- [California scratch-offs](https://scratchwolf.com/california-scratch-offs/): every game on sale with top prizes remaining
+  - [California best odds](https://scratchwolf.com/california-scratch-offs/best-odds/) · [California prizes remaining](https://scratchwolf.com/california-scratch-offs/prizes-remaining/)
+- [Colorado scratch-offs](https://scratchwolf.com/colorado-scratch-offs/): every game on sale with top prizes remaining
+  - [Colorado best odds](https://scratchwolf.com/colorado-scratch-offs/best-odds/) · [Colorado prizes remaining](https://scratchwolf.com/colorado-scratch-offs/prizes-remaining/)
+- [Connecticut scratch-offs](https://scratchwolf.com/connecticut-scratch-offs/): every game on sale with top prizes remaining
+  - [Connecticut best odds](https://scratchwolf.com/connecticut-scratch-offs/best-odds/) · [Connecticut prizes remaining](https://scratchwolf.com/connecticut-scratch-offs/prizes-remaining/)
+- [Washington DC scratch-offs](https://scratchwolf.com/washington-dc-scratch-offs/): every game on sale with top prizes remaining
+  - [Washington DC best odds](https://scratchwolf.com/washington-dc-scratch-offs/best-odds/) · [Washington DC prizes remaining](https://scratchwolf.com/washington-dc-scratch-offs/prizes-remaining/)
+- [Delaware scratch-offs](https://scratchwolf.com/delaware-scratch-offs/): every game on sale with top prizes remaining
+  - [Delaware best odds](https://scratchwolf.com/delaware-scratch-offs/best-odds/) · [Delaware prizes remaining](https://scratchwolf.com/delaware-scratch-offs/prizes-remaining/)
+- [Florida scratch-offs](https://scratchwolf.com/florida-scratch-offs/): every game on sale with top prizes remaining
+  - [Florida best odds](https://scratchwolf.com/florida-scratch-offs/best-odds/) · [Florida prizes remaining](https://scratchwolf.com/florida-scratch-offs/prizes-remaining/)
+- [Georgia scratch-offs](https://scratchwolf.com/georgia-scratch-offs/): every game on sale with top prizes remaining
+  - [Georgia best odds](https://scratchwolf.com/georgia-scratch-offs/best-odds/) · [Georgia prizes remaining](https://scratchwolf.com/georgia-scratch-offs/prizes-remaining/)
+- [Iowa scratch-offs](https://scratchwolf.com/iowa-scratch-offs/): every game on sale with top prizes remaining
+  - [Iowa best odds](https://scratchwolf.com/iowa-scratch-offs/best-odds/) · [Iowa prizes remaining](https://scratchwolf.com/iowa-scratch-offs/prizes-remaining/)
+- [Idaho scratch-offs](https://scratchwolf.com/idaho-scratch-offs/): every game on sale with top prizes remaining
+  - [Idaho best odds](https://scratchwolf.com/idaho-scratch-offs/best-odds/) · [Idaho prizes remaining](https://scratchwolf.com/idaho-scratch-offs/prizes-remaining/)
+- [Illinois scratch-offs](https://scratchwolf.com/illinois-scratch-offs/): every game on sale with top prizes remaining
+  - [Illinois best odds](https://scratchwolf.com/illinois-scratch-offs/best-odds/) · [Illinois prizes remaining](https://scratchwolf.com/illinois-scratch-offs/prizes-remaining/)
+- [Indiana scratch-offs](https://scratchwolf.com/indiana-scratch-offs/): every game on sale with top prizes remaining
+  - [Indiana best odds](https://scratchwolf.com/indiana-scratch-offs/best-odds/) · [Indiana prizes remaining](https://scratchwolf.com/indiana-scratch-offs/prizes-remaining/)
+- [Kansas scratch-offs](https://scratchwolf.com/kansas-scratch-offs/): every game on sale with top prizes remaining
+  - [Kansas best odds](https://scratchwolf.com/kansas-scratch-offs/best-odds/) · [Kansas prizes remaining](https://scratchwolf.com/kansas-scratch-offs/prizes-remaining/)
+- [Kentucky scratch-offs](https://scratchwolf.com/kentucky-scratch-offs/): every game on sale with top prizes remaining
+  - [Kentucky best odds](https://scratchwolf.com/kentucky-scratch-offs/best-odds/) · [Kentucky prizes remaining](https://scratchwolf.com/kentucky-scratch-offs/prizes-remaining/)
+- [Louisiana scratch-offs](https://scratchwolf.com/louisiana-scratch-offs/): every game on sale with top prizes remaining
+  - [Louisiana best odds](https://scratchwolf.com/louisiana-scratch-offs/best-odds/) · [Louisiana prizes remaining](https://scratchwolf.com/louisiana-scratch-offs/prizes-remaining/)
+- [Massachusetts scratch-offs](https://scratchwolf.com/massachusetts-scratch-offs/): every game on sale with top prizes remaining
+  - [Massachusetts best odds](https://scratchwolf.com/massachusetts-scratch-offs/best-odds/) · [Massachusetts prizes remaining](https://scratchwolf.com/massachusetts-scratch-offs/prizes-remaining/)
+- [Maryland scratch-offs](https://scratchwolf.com/maryland-scratch-offs/): every game on sale with top prizes remaining
+  - [Maryland best odds](https://scratchwolf.com/maryland-scratch-offs/best-odds/) · [Maryland prizes remaining](https://scratchwolf.com/maryland-scratch-offs/prizes-remaining/)
+- [Maine scratch-offs](https://scratchwolf.com/maine-scratch-offs/): every game on sale with top prizes remaining
+  - [Maine best odds](https://scratchwolf.com/maine-scratch-offs/best-odds/) · [Maine prizes remaining](https://scratchwolf.com/maine-scratch-offs/prizes-remaining/)
+- [Michigan scratch-offs](https://scratchwolf.com/michigan-scratch-offs/): every game on sale with top prizes remaining
+  - [Michigan best odds](https://scratchwolf.com/michigan-scratch-offs/best-odds/) · [Michigan prizes remaining](https://scratchwolf.com/michigan-scratch-offs/prizes-remaining/)
+- [Minnesota scratch-offs](https://scratchwolf.com/minnesota-scratch-offs/): every game on sale with top prizes remaining
+  - [Minnesota best odds](https://scratchwolf.com/minnesota-scratch-offs/best-odds/) · [Minnesota prizes remaining](https://scratchwolf.com/minnesota-scratch-offs/prizes-remaining/)
+- [Missouri scratch-offs](https://scratchwolf.com/missouri-scratch-offs/): every game on sale with top prizes remaining
+  - [Missouri best odds](https://scratchwolf.com/missouri-scratch-offs/best-odds/) · [Missouri prizes remaining](https://scratchwolf.com/missouri-scratch-offs/prizes-remaining/)
+- [Mississippi scratch-offs](https://scratchwolf.com/mississippi-scratch-offs/): every game on sale with top prizes remaining
+  - [Mississippi best odds](https://scratchwolf.com/mississippi-scratch-offs/best-odds/) · [Mississippi prizes remaining](https://scratchwolf.com/mississippi-scratch-offs/prizes-remaining/)
+- [Montana scratch-offs](https://scratchwolf.com/montana-scratch-offs/): every game on sale with top prizes remaining
+  - [Montana best odds](https://scratchwolf.com/montana-scratch-offs/best-odds/) · [Montana prizes remaining](https://scratchwolf.com/montana-scratch-offs/prizes-remaining/)
+- [North Carolina scratch-offs](https://scratchwolf.com/north-carolina-scratch-offs/): every game on sale with top prizes remaining
+  - [North Carolina best odds](https://scratchwolf.com/north-carolina-scratch-offs/best-odds/) · [North Carolina prizes remaining](https://scratchwolf.com/north-carolina-scratch-offs/prizes-remaining/)
+- [Nebraska scratch-offs](https://scratchwolf.com/nebraska-scratch-offs/): every game on sale with top prizes remaining
+  - [Nebraska best odds](https://scratchwolf.com/nebraska-scratch-offs/best-odds/) · [Nebraska prizes remaining](https://scratchwolf.com/nebraska-scratch-offs/prizes-remaining/)
+- [New Hampshire scratch-offs](https://scratchwolf.com/new-hampshire-scratch-offs/): every game on sale with top prizes remaining
+  - [New Hampshire best odds](https://scratchwolf.com/new-hampshire-scratch-offs/best-odds/) · [New Hampshire prizes remaining](https://scratchwolf.com/new-hampshire-scratch-offs/prizes-remaining/)
+- [New Jersey scratch-offs](https://scratchwolf.com/new-jersey-scratch-offs/): every game on sale with top prizes remaining
+  - [New Jersey best odds](https://scratchwolf.com/new-jersey-scratch-offs/best-odds/) · [New Jersey prizes remaining](https://scratchwolf.com/new-jersey-scratch-offs/prizes-remaining/)
+- [New Mexico scratch-offs](https://scratchwolf.com/new-mexico-scratch-offs/): every game on sale with top prizes remaining
+  - [New Mexico best odds](https://scratchwolf.com/new-mexico-scratch-offs/best-odds/) · [New Mexico prizes remaining](https://scratchwolf.com/new-mexico-scratch-offs/prizes-remaining/)
+- [New York scratch-offs](https://scratchwolf.com/new-york-scratch-offs/): every game on sale with top prizes remaining
+  - [New York best odds](https://scratchwolf.com/new-york-scratch-offs/best-odds/) · [New York prizes remaining](https://scratchwolf.com/new-york-scratch-offs/prizes-remaining/)
+- [Ohio scratch-offs](https://scratchwolf.com/ohio-scratch-offs/): every game on sale with top prizes remaining
+  - [Ohio best odds](https://scratchwolf.com/ohio-scratch-offs/best-odds/) · [Ohio prizes remaining](https://scratchwolf.com/ohio-scratch-offs/prizes-remaining/)
+- [Oklahoma scratch-offs](https://scratchwolf.com/oklahoma-scratch-offs/): every game on sale with top prizes remaining
+  - [Oklahoma best odds](https://scratchwolf.com/oklahoma-scratch-offs/best-odds/) · [Oklahoma prizes remaining](https://scratchwolf.com/oklahoma-scratch-offs/prizes-remaining/)
+- [Oregon scratch-offs](https://scratchwolf.com/oregon-scratch-offs/): every game on sale with top prizes remaining
+  - [Oregon best odds](https://scratchwolf.com/oregon-scratch-offs/best-odds/) · [Oregon prizes remaining](https://scratchwolf.com/oregon-scratch-offs/prizes-remaining/)
+- [Pennsylvania scratch-offs](https://scratchwolf.com/pennsylvania-scratch-offs/): every game on sale with top prizes remaining
+  - [Pennsylvania best odds](https://scratchwolf.com/pennsylvania-scratch-offs/best-odds/) · [Pennsylvania prizes remaining](https://scratchwolf.com/pennsylvania-scratch-offs/prizes-remaining/)
+- [Rhode Island scratch-offs](https://scratchwolf.com/rhode-island-scratch-offs/): every game on sale with top prizes remaining
+  - [Rhode Island best odds](https://scratchwolf.com/rhode-island-scratch-offs/best-odds/) · [Rhode Island prizes remaining](https://scratchwolf.com/rhode-island-scratch-offs/prizes-remaining/)
+- [South Carolina scratch-offs](https://scratchwolf.com/south-carolina-scratch-offs/): every game on sale with top prizes remaining
+  - [South Carolina best odds](https://scratchwolf.com/south-carolina-scratch-offs/best-odds/) · [South Carolina prizes remaining](https://scratchwolf.com/south-carolina-scratch-offs/prizes-remaining/)
+- [South Dakota scratch-offs](https://scratchwolf.com/south-dakota-scratch-offs/): every game on sale with top prizes remaining
+  - [South Dakota best odds](https://scratchwolf.com/south-dakota-scratch-offs/best-odds/) · [South Dakota prizes remaining](https://scratchwolf.com/south-dakota-scratch-offs/prizes-remaining/)
+- [Tennessee scratch-offs](https://scratchwolf.com/tennessee-scratch-offs/): every game on sale with top prizes remaining
+  - [Tennessee best odds](https://scratchwolf.com/tennessee-scratch-offs/best-odds/) · [Tennessee prizes remaining](https://scratchwolf.com/tennessee-scratch-offs/prizes-remaining/)
+- [Texas scratch-offs](https://scratchwolf.com/texas-scratch-offs/): every game on sale with top prizes remaining
+  - [Texas best odds](https://scratchwolf.com/texas-scratch-offs/best-odds/) · [Texas prizes remaining](https://scratchwolf.com/texas-scratch-offs/prizes-remaining/)
+- [Virginia scratch-offs](https://scratchwolf.com/virginia-scratch-offs/): every game on sale with top prizes remaining
+  - [Virginia best odds](https://scratchwolf.com/virginia-scratch-offs/best-odds/) · [Virginia prizes remaining](https://scratchwolf.com/virginia-scratch-offs/prizes-remaining/)
+- [Vermont scratch-offs](https://scratchwolf.com/vermont-scratch-offs/): every game on sale with top prizes remaining
+  - [Vermont best odds](https://scratchwolf.com/vermont-scratch-offs/best-odds/) · [Vermont prizes remaining](https://scratchwolf.com/vermont-scratch-offs/prizes-remaining/)
+- [Washington scratch-offs](https://scratchwolf.com/washington-scratch-offs/): every game on sale with top prizes remaining
+  - [Washington best odds](https://scratchwolf.com/washington-scratch-offs/best-odds/) · [Washington prizes remaining](https://scratchwolf.com/washington-scratch-offs/prizes-remaining/)
+- [Wisconsin scratch-offs](https://scratchwolf.com/wisconsin-scratch-offs/): every game on sale with top prizes remaining
+  - [Wisconsin best odds](https://scratchwolf.com/wisconsin-scratch-offs/best-odds/) · [Wisconsin prizes remaining](https://scratchwolf.com/wisconsin-scratch-offs/prizes-remaining/)
+- [West Virginia scratch-offs](https://scratchwolf.com/west-virginia-scratch-offs/): every game on sale with top prizes remaining
+  - [West Virginia best odds](https://scratchwolf.com/west-virginia-scratch-offs/best-odds/) · [West Virginia prizes remaining](https://scratchwolf.com/west-virginia-scratch-offs/prizes-remaining/)
+
+## Optional
+
+- [Privacy](https://scratchwolf.com/privacy) · [Terms](https://scratchwolf.com/terms) · [Sitemap of every game page](https://scratchwolf.com/sitemap.xml)

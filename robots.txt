@@ -1,6 +1,7 @@
 User-agent: *
-Allow: /
 Disallow: /app
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # This dataset is recounted daily at real cost. Not free training data.
 User-agent: GPTBot
@@ -66,14 +67,37 @@ Disallow: /
 User-agent: magpie-crawler
 Disallow: /
 
-# AI search agents are allowed: they cite and link, so they send readers back.
+# AI search and answer agents are allowed: they cite and link, so they send readers back.
 User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
+Disallow: /app
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /app
+Allow: /
+
+User-agent: Claude-SearchBot
+Disallow: /app
+Allow: /
+
+User-agent: Claude-User
+Disallow: /app
+Allow: /
+
+User-agent: PerplexityBot
+Disallow: /app
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /app
+Allow: /
+
+User-agent: DuckAssistBot
+Disallow: /app
+Allow: /
+
+User-agent: MistralAI-User
+Disallow: /app
 Allow: /
 
 Sitemap: https://scratchwolf.com/sitemap.xml
