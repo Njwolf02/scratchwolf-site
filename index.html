@@ -100,6 +100,11 @@
     .badge-cta { background: var(--brand); color: var(--on-brand); text-decoration: none; }
     .badge-cta:hover { background: var(--green); border-color: var(--green); }
     .badge-note { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); }
+    .picker { margin-top: 26px; max-width: 480px; }
+    .picker label { display: block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .picker-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .picker select { flex: 1 1 200px; min-height: 48px; padding: 10px 12px; font: inherit; font-size: 17px; color: var(--navy); background: var(--paper); border: 1.5px solid var(--navy); border-radius: 0; }
+    .picker .badge { margin-top: 0; min-height: 48px; font-size: 16px; cursor: pointer; font-family: inherit; }
     .badge-note a { color: var(--muted); }
     .badge-note a:hover { color: var(--green); }
     .states { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 18px; margin-top: 18px; }
@@ -203,7 +208,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         <a href="#states">States</a>
         <a href="https://scratchwolf.com/about/">How it works</a>
       </span>
-      <span class="right">Louisville, KY</span>
+      <span class="right">Updated daily</span>
     </div>
   </nav>
 
@@ -216,8 +221,23 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         morning &mdash; all 3,000-odd games in <b>all 44 states that sell them</b>, which is every one there
         is. Each game gets a Buy Score, and the best in your state each morning is your <b>Wolf Pick</b>.</p>
         <p class="fresh">Prize counts checked <time datetime="2026-10-30">October 30, 2026</time></p>
-        <a class="badge badge-cta" href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="home_hero">Open ScratchWolf &rarr;</a>
-        <span class="badge-note">Free in your browser &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
+        <form class="picker" action="#states" onsubmit="return swPick(this)">
+          <label for="sw-state">Your state</label>
+          <div class="picker-row">
+            <select id="sw-state" name="state"><option value="AZ" data-href="https://scratchwolf.com/arizona-scratch-offs/">Arizona</option><option value="AR" data-href="https://scratchwolf.com/arkansas-scratch-offs/">Arkansas</option><option value="CA" data-href="https://scratchwolf.com/california-scratch-offs/">California</option><option value="CO" data-href="https://scratchwolf.com/colorado-scratch-offs/">Colorado</option><option value="CT" data-href="https://scratchwolf.com/connecticut-scratch-offs/">Connecticut</option><option value="DE" data-href="https://scratchwolf.com/delaware-scratch-offs/">Delaware</option><option value="FL" data-href="https://scratchwolf.com/florida-scratch-offs/">Florida</option><option value="GA" data-href="https://scratchwolf.com/georgia-scratch-offs/">Georgia</option><option value="ID" data-href="https://scratchwolf.com/idaho-scratch-offs/">Idaho</option><option value="IL" data-href="https://scratchwolf.com/illinois-scratch-offs/">Illinois</option><option value="IN" data-href="https://scratchwolf.com/indiana-scratch-offs/">Indiana</option><option value="IA" data-href="https://scratchwolf.com/iowa-scratch-offs/">Iowa</option><option value="KS" data-href="https://scratchwolf.com/kansas-scratch-offs/">Kansas</option><option value="KY" data-href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</option><option value="LA" data-href="https://scratchwolf.com/louisiana-scratch-offs/">Louisiana</option><option value="ME" data-href="https://scratchwolf.com/maine-scratch-offs/">Maine</option><option value="MD" data-href="https://scratchwolf.com/maryland-scratch-offs/">Maryland</option><option value="MA" data-href="https://scratchwolf.com/massachusetts-scratch-offs/">Massachusetts</option><option value="MI" data-href="https://scratchwolf.com/michigan-scratch-offs/">Michigan</option><option value="MN" data-href="https://scratchwolf.com/minnesota-scratch-offs/">Minnesota</option><option value="MS" data-href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</option><option value="MO" data-href="https://scratchwolf.com/missouri-scratch-offs/">Missouri</option><option value="MT" data-href="https://scratchwolf.com/montana-scratch-offs/">Montana</option><option value="NE" data-href="https://scratchwolf.com/nebraska-scratch-offs/">Nebraska</option><option value="NH" data-href="https://scratchwolf.com/new-hampshire-scratch-offs/">New Hampshire</option><option value="NJ" data-href="https://scratchwolf.com/new-jersey-scratch-offs/">New Jersey</option><option value="NM" data-href="https://scratchwolf.com/new-mexico-scratch-offs/">New Mexico</option><option value="NY" data-href="https://scratchwolf.com/new-york-scratch-offs/">New York</option><option value="NC" data-href="https://scratchwolf.com/north-carolina-scratch-offs/">North Carolina</option><option value="OH" data-href="https://scratchwolf.com/ohio-scratch-offs/">Ohio</option><option value="OK" data-href="https://scratchwolf.com/oklahoma-scratch-offs/">Oklahoma</option><option value="OR" data-href="https://scratchwolf.com/oregon-scratch-offs/">Oregon</option><option value="PA" data-href="https://scratchwolf.com/pennsylvania-scratch-offs/">Pennsylvania</option><option value="RI" data-href="https://scratchwolf.com/rhode-island-scratch-offs/">Rhode Island</option><option value="SC" data-href="https://scratchwolf.com/south-carolina-scratch-offs/">South Carolina</option><option value="SD" data-href="https://scratchwolf.com/south-dakota-scratch-offs/">South Dakota</option><option value="TN" data-href="https://scratchwolf.com/tennessee-scratch-offs/">Tennessee</option><option value="TX" data-href="https://scratchwolf.com/texas-scratch-offs/">Texas</option><option value="VT" data-href="https://scratchwolf.com/vermont-scratch-offs/">Vermont</option><option value="VA" data-href="https://scratchwolf.com/virginia-scratch-offs/">Virginia</option><option value="WA" data-href="https://scratchwolf.com/washington-scratch-offs/">Washington</option><option value="DC" data-href="https://scratchwolf.com/washington-dc-scratch-offs/">Washington DC</option><option value="WV" data-href="https://scratchwolf.com/west-virginia-scratch-offs/">West Virginia</option><option value="WI" data-href="https://scratchwolf.com/wisconsin-scratch-offs/">Wisconsin</option></select>
+            <button type="submit" class="badge badge-cta">See scratch-offs &rarr;</button>
+          </div>
+        </form>
+        <script>
+        function swPick(f){var o=f.state.options[f.state.selectedIndex];
+          if(window.gtag)gtag('event','home_state_pick',{state:o.value});
+          location.href=o.getAttribute('data-href');return false;}
+        (function(){var s=document.getElementById('sw-state');if(!s)return;
+          fetch('/api/v1/geo').then(function(r){return r.ok?r.json():null}).then(function(g){
+            if(g&&g.state){for(var i=0;i<s.options.length;i++)if(s.options[i].value===g.state){s.selectedIndex=i;break;}}
+          }).catch(function(){});})();
+        </script>
+        <span class="badge-note">Or <a href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="home_hero">open the free app</a> for today’s Wolf Pick and AI Watch &middot; <a href="https://scratchwolf.com/mobile-app/">iOS &amp; Android coming soon</a></span>
       </div>
       <figure class="phone">
         <div class="frame"><img src="/assets/app-screen.png" alt="ScratchWolf game analysis screen showing a value score of 79 for a Kentucky scratch-off" /></div>

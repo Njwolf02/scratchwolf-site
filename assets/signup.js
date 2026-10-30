@@ -14,6 +14,10 @@
 
   var state = form.getAttribute('data-state');
   var stateName = form.getAttribute('data-name');
+  // Set only on a GAME page: after sign-up the game joins the account's tracked list, and its alerts
+  // are emailed whatever the tier (free accounts track 3 — NotificationPolicy / TrackedGames).
+  var game = form.getAttribute('data-game');
+  var gameName = form.getAttribute('data-game-name');
   var api = form.getAttribute('data-api');
   var app = form.getAttribute('data-app');
   var email = form.querySelector('#signup-email');
@@ -43,14 +47,23 @@
   }
   function busy(on, text) { button.disabled = on; if (text) say(text); }
 
-  function done(homeState) {
+  function done(homeState, tracked) {
     while (form.firstChild) form.removeChild(form.firstChild);
     var title = document.createElement('b');
-    title.textContent = 'You’re signed up.';
+    title.textContent = tracked === 'ok' || tracked === 'already'
+      ? 'You’re tracking ' + gameName + '.'
+      : 'You’re signed up.';
     var body = document.createElement('span');
-    body.textContent = homeState && homeState !== state
+    var daily = homeState && homeState !== state
       ? 'Your daily email stays set to ' + homeState + ' — you can change it in Settings.'
       : 'Your first ' + stateName + ' email arrives tomorrow morning, and new accounts have Premium free for 14 days. If it lands in Promotions, drag it to Primary so you see it.';
+    body.textContent = (tracked === 'ok' || tracked === 'already'
+      ? 'We’ll email you the morning it loses a top prize or starts running low. '
+      : tracked === 'full'
+        ? 'Free accounts track 3 games and you already track 3 — Premium tracks as many as you like. '
+        : tracked === 'failed'
+          ? 'We could not add this game to your tracked list just now — tap the star on its page in the app. '
+          : '') + daily;
     var link = document.createElement('a');
     link.href = app + '/?state=' + state.toLowerCase();
     link.textContent = 'See today’s ' + stateName + ' picks now →';
@@ -81,6 +94,27 @@
     }).then(function () { busy(false); });
   }
 
+  // Adds this page's game to the account's favorites, the list alerts are matched against. The app
+  // writes favorites as "<STATE>-<row id>", so the row id is looked up by the state's game number.
+  function trackGame(me) {
+    if (!game) return Promise.resolve(null);
+    return call('GET', '/v1/games/' + state.toLowerCase() + '/' + encodeURIComponent(game)).then(function (g) {
+      var row = g.ok ? (g.data.data || g.data) : null;
+      if (!row || !row.id) return 'failed';
+      var key = state + '-' + row.id;
+      var favorites = [];
+      try { favorites = JSON.parse(me.favorites || '[]') || []; } catch (e) { favorites = []; }
+      if (!Array.isArray(favorites)) favorites = [];
+      if (favorites.indexOf(key) >= 0) return 'already';
+      if (!me.isPremium && favorites.length >= 3) return 'full';
+      return call('PUT', '/v1/me/settings', { favorites: favorites.concat([key]) }).then(function (r) {
+        if (!r.ok) return 'failed';
+        track('game_tracked', { state: state, game_number: game });
+        return 'ok';
+      });
+    }).catch(function () { return 'failed'; });
+  }
+
   function confirmCode() {
     var digits = code.value.replace(/\D/g, '');
     if (digits.length !== 6) { say('Enter the 6-digit code from the email.'); failed('code', 'invalid_code_format'); code.focus(); return; }
@@ -90,11 +124,14 @@
       track('login', { method: 'site_email_code', state: state });
       // Only a NEW account (no home state yet) takes this page's state — never overwrite a choice.
       return call('GET', '/v1/me').then(function (me) {
-        var home = me.ok ? me.data.favoriteState : null;
+        var data = me.ok ? me.data : {};
+        var home = data.favoriteState || null;
         // No home state yet = a NEW account: GA4's recommended sign_up event, beside login.
-        if (!home) { track('sign_up', { method: 'site_email_code', state: state }); return call('PUT', '/v1/me/settings', { favoriteState: state }).then(function () { return null; }); }
-        return home;
-      }).catch(function () { return null; }).then(done);
+        var setHome = home ? Promise.resolve() : (track('sign_up', { method: 'site_email_code', state: state }),
+          call('PUT', '/v1/me/settings', { favoriteState: state }));
+        return setHome.then(function () { return me.ok ? trackGame(data) : (game ? 'failed' : null); })
+          .then(function (tracked) { done(home, tracked); });
+      }).catch(function () { done(null, game ? 'failed' : null); });
     }).catch(function () {
       say('Could not reach ScratchWolf. Check your connection and try again.');
       failed('code', 'network');
