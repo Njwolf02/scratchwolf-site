@@ -89,9 +89,9 @@
 color:var(--ink);background:var(--paper);line-height:1.65}
 h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid var(--rule);padding:18px 0}
+header{border-bottom:1px solid var(--rule);padding:8px 0}
 header a{text-decoration:none;color:var(--navy);font-family:Fraunces,serif;font-weight:800;font-size:19px;
-  display:inline-flex;align-items:center;gap:9px}
+  display:inline-flex;align-items:center;gap:9px;min-height:44px}
 header a svg{width:26px;height:26px;flex:0 0 26px}
 /* Site-wide nav. The category leaders all carry one and we had only a logo: a persistent bar puts
    the hub links on all 3,465 pages instead of the homepage alone, which is the cheapest way to get
@@ -99,7 +99,10 @@ header a svg{width:26px;height:26px;flex:0 0 26px}
 header .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 header nav{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 header nav a{font-family:'Public Sans',system-ui,sans-serif;font-size:14px;font-weight:600;
-  color:var(--muted);letter-spacing:.01em}
+  color:var(--muted);letter-spacing:.01em;min-height:44px}
+/* 44px targets everywhere (AGENTS.md); on a phone the nav is ONE row under the logo instead of
+   wrapping to two, which pushed every page's h1 ~290px down. */
+@media (max-width:640px){header nav{margin-left:0;width:100%;gap:0 14px;justify-content:space-between}}
 header nav a:hover{color:var(--navy)}
 header nav a.navcta{color:var(--on-brand);background:var(--brand);padding:7px 14px;border-radius:3px}
 header nav a.navcta:hover{color:var(--on-brand)}
@@ -111,7 +114,7 @@ header nav a.navcta:hover{color:var(--on-brand)}
   border-radius:3px;text-decoration:none;color:var(--navy);font-weight:700;font-size:15px;background:var(--surface)}
 .pricetiers a:hover{border-color:var(--navy)}
 .pricetiers a span{font-weight:400;font-size:13px;color:var(--muted)}
-.fresh{display:inline-block;margin:0 0 4px;font-family:'Public Sans',system-ui,sans-serif;
+.fresh{display:inline-block;margin:14px 0 4px;font-family:'Public Sans',system-ui,sans-serif;
   font-size:13px;font-weight:600;color:var(--fresh-fg);background:var(--fresh-bg);border-radius:99px;padding:5px 12px}
 .fresh::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
   background:var(--green);margin-right:7px;vertical-align:middle}
@@ -326,7 +329,7 @@ been claimed, and a state lottery is under no obligation to stop selling a game 
   </tr>
   <tr>
   <td>12</td>
-  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/hot-chicken-1375/">HOT Chicken</a> <span class="gnum">#1375</span></td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/stacks-of-green-1371/">Stacks Of Green</a> <span class="gnum">#1371</span></td>
   <td>$2</td>
   <td>$20,000</td>
   <td>2 of 3</td>
@@ -334,7 +337,7 @@ been claimed, and a state lottery is under no obligation to stop selling a game 
   </tr>
   <tr>
   <td>13</td>
-  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/stacks-of-green-1371/">Stacks Of Green</a> <span class="gnum">#1371</span></td>
+  <td><a href="https://scratchwolf.com/tennessee-scratch-offs/hot-chicken-1375/">HOT Chicken</a> <span class="gnum">#1375</span></td>
   <td>$2</td>
   <td>$20,000</td>
   <td>2 of 3</td>
