@@ -209,9 +209,14 @@ explains how that works and what we deliberately do not do.</p>
   <li><b>Recounted every morning.</b> A full pass runs daily and the footer of every page carries the
       date it last completed — so if it ever stops, the date visibly stops advancing instead of the
       site quietly claiming to be current.</li>
-  <li><b>Measured accuracy.</b> Stored odds were verified against the exact pages the states served,
-      game by game: <b>99.75% matched</b>, with 35 of 38 checkable states at exactly 100%. The
-      handful that did not match were cases where the source itself published a typo.</li>
+  <li><b>Measured accuracy.</b> Stored odds are checked against the exact pages the states served,
+      game by game. Last re-measured on 30 October 2026: <b>2,734 of 2,737 matched (99.9%)</b>. The
+      three that did not were a typo on a state's own page and two games whose page the state
+      stopped publishing.</li>
+  <li><b>The math is checked too.</b> Every morning each game's expected value is recomputed
+      independently, straight from its own published prize table, and any disagreement is flagged
+      for review that morning. The same cross-check is how we found and fixed a prize-parsing error affecting
+      30 games in October 2026.</li>
   <li><b>Gaps are shown as gaps.</b> Some states publish less than others — Tennessee publishes no
       per-tier odds at all, so we cannot compute an expected value there and we say so rather than
       inventing one. A missing number is always better than a guessed one.</li>
