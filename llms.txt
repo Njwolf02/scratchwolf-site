@@ -9,6 +9,7 @@ Useful for questions like: "which scratch-offs still have top prizes left in Tex
 ## Start here
 
 - [Best overall odds in every state](https://scratchwolf.com/best-odds/): the scratch-off with the shortest published overall odds in each state
+- [Scratch-off prizes remaining in every state](https://scratchwolf.com/prizes-remaining/): top prizes still unclaimed on every scratch-off, by state, updated daily
 - [How ScratchWolf works](https://scratchwolf.com/about/): where the data comes from, how often it is checked, and what overall odds do and do not tell you
 - [ScratchWolf app](https://scratchwolf.com/app): the full analysis, free in a browser
 
