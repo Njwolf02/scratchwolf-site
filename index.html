@@ -132,6 +132,21 @@
     footer { padding: 26px 0 44px; font-size: 13.5px; color: var(--muted); }
     footer a { color: var(--navy); }
     @media (max-width: 640px) { .hero h1 { font-size: 36px; } .phone { flex-basis: 230px; } }
+    .cta{display:block;margin:34px 0;padding:22px 24px;background:var(--brand);color:var(--on-brand);text-decoration:none;border-radius:2px}
+.cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
+.cta span{color:var(--on-brand-dim,var(--on-brand));font-size:15px}
+.cta-email{background:var(--surface,var(--paper));color:var(--navy);border:2px solid var(--navy)}
+.cta-email span{color:var(--ink)}
+.signup-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.signup-row input{flex:1 1 220px;min-height:44px;padding:10px 12px;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px}
+.signup-code{flex:1 1 160px;display:flex}
+.signup-code[hidden]{display:none}
+.signup-row button{min-height:44px;padding:10px 18px;font:inherit;font-weight:700;color:var(--on-brand);background:var(--brand);border:0;border-radius:2px;cursor:pointer}
+.signup-row button:disabled{opacity:.6;cursor:wait}
+.signup-msg{margin:10px 0 0;font-size:14px;color:var(--ink)}
+.signup-msg:empty{display:none}
+.signup a{display:inline-block;margin-top:10px;color:var(--navy);font-weight:700}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   </style>
   <link rel="canonical" href="https://scratchwolf.com/"/>
   <meta property="og:type" content="website"/>
@@ -211,6 +226,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         <a href="https://scratchwolf.com/best-odds/">Best odds</a>
         <a href="#states">States</a>
         <a href="https://scratchwolf.com/about/">How it works</a>
+        <a href="https://scratchwolf.com/premium/" data-ga-event="premium_cta" data-ga-placement="nav">Premium</a>
       </span>
       <span class="right">Updated daily</span>
     </div>
@@ -228,7 +244,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         <p class="sub">ScratchWolf recounts the remaining prizes on every scratch-off in your state each
         morning &mdash; all 3,000-odd games in <b>all 44 states that sell them</b>, which is every one there
         is. Each game gets a Buy Score, and the best in your state each morning is your <b>Wolf Pick</b>.</p>
-        <p class="fresh">Prize counts checked <time datetime="2026-11-24">November 24, 2026</time></p>
+        <p class="fresh">Prize counts checked <time datetime="2026-11-25">November 24, 2026</time></p>
         <form class="picker" action="#states" onsubmit="return swPick(this)">
           <label for="sw-state">Your state</label>
           <div class="picker-row">
@@ -281,6 +297,27 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       scratch-offs by law. That leaves 44 &mdash; and we cover all of them. Most comparable sites
       cover 25 to 41.</p>
     </div>
+  </section>
+
+  <section class="signup-section">
+    <div class="wrap">
+<form class="cta cta-email signup" action="https://scratchwolf.com/app/login" method="get" data-state="AZ" data-name="Arizona" data-api="/api" data-app="https://scratchwolf.com/app">
+  <b>Know which scratch-offs in your state lost their top prizes before you buy.</b>
+  <span>One short email each morning for your state: the games that just lost a top prize, today’s top picks, and the game AI Watch says is likeliest to lose one next. Free, unsubscribe any time. New accounts get 14 days of Premium free, no card.</span>
+  <label for="signup-state">Your state</label>
+  <select id="signup-state" name="state"><option value="az">Arizona</option><option value="ar">Arkansas</option><option value="ca">California</option><option value="co">Colorado</option><option value="ct">Connecticut</option><option value="de">Delaware</option><option value="fl">Florida</option><option value="ga">Georgia</option><option value="id">Idaho</option><option value="il">Illinois</option><option value="in">Indiana</option><option value="ia">Iowa</option><option value="ks">Kansas</option><option value="ky">Kentucky</option><option value="la">Louisiana</option><option value="me">Maine</option><option value="md">Maryland</option><option value="ma">Massachusetts</option><option value="mi">Michigan</option><option value="mn">Minnesota</option><option value="ms">Mississippi</option><option value="mo">Missouri</option><option value="mt">Montana</option><option value="ne">Nebraska</option><option value="nh">New Hampshire</option><option value="nj">New Jersey</option><option value="nm">New Mexico</option><option value="ny">New York</option><option value="nc">North Carolina</option><option value="oh">Ohio</option><option value="ok">Oklahoma</option><option value="or">Oregon</option><option value="pa">Pennsylvania</option><option value="ri">Rhode Island</option><option value="sc">South Carolina</option><option value="sd">South Dakota</option><option value="tn">Tennessee</option><option value="tx">Texas</option><option value="vt">Vermont</option><option value="va">Virginia</option><option value="wa">Washington</option><option value="dc">Washington DC</option><option value="wv">West Virginia</option><option value="wi">Wisconsin</option></select>
+  <div class="signup-row">
+    <label class="vh" for="signup-email">Email address</label>
+    <input id="signup-email" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com"/>
+    <div class="signup-code" hidden>
+      <label class="vh" for="signup-code">6-digit code from the email</label>
+      <input id="signup-code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="7" placeholder="6-digit code"/>
+    </div>
+    <button type="submit">Send me the daily list</button>
+  </div>
+  <p class="signup-msg" role="status" aria-live="polite"></p>
+</form>
+<script src="https://scratchwolf.com/assets/signup.js" defer></script></div>
   </section>
 
   <section class="states-section" id="states">
@@ -385,7 +422,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
   <footer>
     <div class="wrap">
-      <a href="https://scratchwolf.com/about/">About</a> &middot; <a href="https://scratchwolf.com/mobile-app/">Mobile app</a> &middot; <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> · <span>Built by <a href="https://wolfdigitable.com">Wolf Digitable</a></span>
+      <a href="https://scratchwolf.com/about/">About</a> &middot; <a href="https://scratchwolf.com/mobile-app/">Mobile app</a> &middot; <a href="https://scratchwolf.com/premium/" data-ga-event="premium_cta" data-ga-placement="footer">Premium</a> &middot; <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="mailto:support@scratchwolf.com">support@scratchwolf.com</a> · <span>Built by <a href="https://wolfdigitable.com">Wolf Digitable</a></span>
     </div>
   </footer>
 </body>

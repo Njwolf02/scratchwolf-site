@@ -148,8 +148,8 @@ td a{color:var(--navy);font-weight:600}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .cta{display:block;margin:34px 0;padding:22px 24px;background:var(--brand);color:var(--on-brand);text-decoration:none;border-radius:2px}
 .cta b{font-family:Fraunces,serif;font-size:19px;display:block;margin-bottom:4px}
-.cta span{color:var(--on-brand-dim);font-size:15px}
-.cta-email{background:var(--surface);color:var(--navy);border:2px solid var(--navy)}
+.cta span{color:var(--on-brand-dim,var(--on-brand));font-size:15px}
+.cta-email{background:var(--surface,var(--paper));color:var(--navy);border:2px solid var(--navy)}
 .cta-email span{color:var(--ink)}
 .signup-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
 .signup-row input{flex:1 1 220px;min-height:44px;padding:10px 12px;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px}
@@ -160,6 +160,7 @@ td a{color:var(--navy);font-weight:600}
 .signup-msg{margin:10px 0 0;font-size:14px;color:var(--ink)}
 .signup-msg:empty{display:none}
 .signup a{display:inline-block;margin-top:10px;color:var(--navy);font-weight:700}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .track-dock{display:none}
 @media (max-width:640px){
   .track-dock:not([hidden]){display:flex;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;
@@ -170,7 +171,6 @@ td a{color:var(--navy);font-weight:600}
   .track-dock button{min-width:44px;min-height:44px;font-size:22px;line-height:1;color:var(--muted);background:none;border:0;cursor:pointer}
   body.has-dock{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 }
-.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* Above-the-fold bar. Compact on purpose: these pages must RANK, so the thing a visitor searched
    for has to stay visible. It orients someone who landed here from Google and gives them the one
    next step, without becoming an interstitial that buries the content. min-height 44px is the
@@ -196,7 +196,7 @@ footer .help{font-weight:700;color:var(--ink)}
 .crumb{font-size:13px;color:var(--muted);margin:26px 0 0}.crumb a{color:var(--muted)}
 .source-notice{margin:16px 0 22px;padding:12px 16px;background:var(--surface-2);border:1px solid var(--rule);border-left:3px solid var(--bar);border-radius:2px;font-size:14.5px;color:var(--ink);line-height:1.5}
 </style>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Dataset","name":"50X The Money — Mississippi scratch-off prizes remaining and odds","description":"Top prizes remaining, overall odds and the published prize breakdown for 50X The Money, a $10 Mississippi Lottery scratch-off (game #200).","url":"https://scratchwolf.com/mississippi-scratch-offs/50x-the-money-200/","identifier":"200","isAccessibleForFree":true,"license":"https://scratchwolf.com/terms","creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-11-24"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many top prizes are left on 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"0 of the 2 top prizes are still unclaimed, according to the Mississippi Lottery's own published count. ScratchWolf recounts it every morning."}},{"@type":"Question","name":"What are the odds of winning 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"The Mississippi Lottery lists overall odds of 1 in 3.59 for 50X The Money. That is the chance a ticket wins any prize at all, including a prize equal to the ticket price — not the chance of winning the top prize."}},{"@type":"Question","name":"How much does 50X The Money cost?","acceptedAnswer":{"@type":"Answer","text":"A 50X The Money ticket costs $10 at Mississippi Lottery retailers."}},{"@type":"Question","name":"What is the biggest prize still available on 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"$2,000 — the Mississippi Lottery still shows 1 unclaimed at that level."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ScratchWolf","item":"https://scratchwolf.com/"},{"@type":"ListItem","position":2,"name":"Mississippi","item":"https://scratchwolf.com/mississippi-scratch-offs/"},{"@type":"ListItem","position":3,"name":"50X The Money"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Dataset","name":"50X The Money — Mississippi scratch-off prizes remaining and odds","description":"Top prizes remaining, overall odds and the published prize breakdown for 50X The Money, a $10 Mississippi Lottery scratch-off (game #200).","url":"https://scratchwolf.com/mississippi-scratch-offs/50x-the-money-200/","identifier":"200","isAccessibleForFree":true,"license":"https://scratchwolf.com/terms","creator":{"@type":"Organization","name":"ScratchWolf","url":"https://scratchwolf.com"},"temporalCoverage":"2026-11-25"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many top prizes are left on 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"0 of the 2 top prizes are still unclaimed, according to the Mississippi Lottery's own published count. ScratchWolf recounts it every morning."}},{"@type":"Question","name":"What are the odds of winning 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"The Mississippi Lottery lists overall odds of 1 in 3.59 for 50X The Money. That is the chance a ticket wins any prize at all, including a prize equal to the ticket price — not the chance of winning the top prize."}},{"@type":"Question","name":"How much does 50X The Money cost?","acceptedAnswer":{"@type":"Answer","text":"A 50X The Money ticket costs $10 at Mississippi Lottery retailers."}},{"@type":"Question","name":"What is the biggest prize still available on 50X The Money?","acceptedAnswer":{"@type":"Answer","text":"$2,000 — the Mississippi Lottery still shows 1 unclaimed at that level."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ScratchWolf","item":"https://scratchwolf.com/"},{"@type":"ListItem","position":2,"name":"Mississippi","item":"https://scratchwolf.com/mississippi-scratch-offs/"},{"@type":"ListItem","position":3,"name":"50X The Money"}]}]</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-755E8P2420"></script>
 <script>
 if(navigator.webdriver)window['ga-disable-G-755E8P2420']=true;
@@ -210,8 +210,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </head>
 <body data-page-type="game">
 <header><div class="wrap"><a href="https://scratchwolf.com/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg>ScratchWolf</a>
-<nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a class="navcta" href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="nav">Open app</a></nav></div></header>
-<main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-11-24">November 24, 2026</time></p>
+<nav aria-label="Main"><a href="https://scratchwolf.com/best-odds/">Best odds</a><a href="https://scratchwolf.com/#states">States</a><a href="https://scratchwolf.com/about/">How it works</a><a href="https://scratchwolf.com/premium/" data-ga-event="premium_cta" data-ga-placement="nav">Premium</a><a class="navcta" href="https://scratchwolf.com/app" data-ga-event="app_cta" data-ga-placement="nav">Open app</a></nav></div></header>
+<main class="wrap"><p class="fresh">Prize counts checked <time datetime="2026-11-25">November 24, 2026</time></p>
 
 <p class="crumb"><a href="https://scratchwolf.com/">ScratchWolf</a> › <a href="https://scratchwolf.com/mississippi-scratch-offs/">Mississippi</a> › 50X The Money</p>
 <h1>50X The Money</h1>
@@ -326,7 +326,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </div></main>
 <footer><div class="wrap">
 <div class="fmark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="currentColor"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#0e9f6e"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#0e9f6e"/></svg><b>ScratchWolf</b></div>
-<p>Prize counts last recounted <time datetime="2026-11-24">November 24, 2026</time> from official state
+<p>Prize counts last recounted <time datetime="2026-11-25">November 24, 2026</time> from official state
 lottery sources. ScratchWolf is an educational tool — we do not sell tickets or accept wagers.</p>
 <p class="legal">ScratchWolf is not affiliated with or endorsed by any state lottery. Data is
 collected from official public sources and may be delayed; all lottery games have a negative
@@ -334,7 +334,7 @@ expected return over time and results are never guaranteed. Nothing here is a pr
 promise of winning. For adults 18+ (19/21 where required).</p>
 <p class="legal help">If gambling is causing you harm, call the National Problem Gambling Helpline
 at <a href="tel:1-800-522-4700">1-800-522-4700</a> (1-800-GAMBLER) — free, confidential, 24/7.</p>
-<p class="legal"><a href="https://scratchwolf.com/about/">How it works</a> · <a href="https://scratchwolf.com/privacy">Privacy</a> · <a href="https://scratchwolf.com/terms">Terms</a></p>
+<p class="legal"><a href="https://scratchwolf.com/about/">How it works</a> · <a href="https://scratchwolf.com/premium/" data-ga-event="premium_cta" data-ga-placement="footer">Premium</a> · <a href="https://scratchwolf.com/privacy">Privacy</a> · <a href="https://scratchwolf.com/terms">Terms</a></p>
 </div></footer>
 </body>
 </html>

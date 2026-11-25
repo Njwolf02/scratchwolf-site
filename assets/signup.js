@@ -39,6 +39,26 @@
   var signedIn = null;   // the /v1/me body when this visitor already has a session (game pages only)
 
   // Mirrors FREE_TIER_LIMITS.FAVORITE_GAMES (app) and TrackedGames.FreeLimit (server).
+  // A page with no state of its own (the homepage, the national lists) asks for one: the box follows
+  // the picker, pre-set from /v1/geo the way the homepage's own state picker is, until the visitor
+  // chooses — a guess never overrides a choice.
+  var picker = form.querySelector('select[name=state]');
+  if (picker) {
+    var chosen = false;
+    var pick = function () {
+      state = picker.value.toUpperCase();
+      stateName = picker.options[picker.selectedIndex].text;
+    };
+    picker.addEventListener('change', function () { chosen = true; pick(); });
+    pick();
+    call('GET', '/v1/geo').then(function (r) {
+      var here = r.ok && r.data && r.data.state ? String(r.data.state).toLowerCase() : '';
+      if (chosen || !here || !picker.querySelector('option[value="' + here + '"]')) return;
+      picker.value = here;
+      pick();
+    }).catch(function () { /* offline or blocked: the first state stays selected */ });
+  }
+
   var FREE_TRACKED = 3;
   // Mirrors CARD_TRIAL_DAYS and PRICE in the app's subscribeOffer.ts — the offer must say what checkout does.
   var TRIAL_DAYS = 7;
